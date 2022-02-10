@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.AnchorPane?>
+<?import org.kordamp.ikonli.javafx.FontIcon?>
+<?import javafx.scene.control.Button?>
+
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.geometry.Insets?>
+<AnchorPane fx:id="root" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
+            prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.example.proyectotallerdi.RootController" stylesheets="@css/taller.css">
+
+   <fx:include fx:id="vistaLogin" source="login.fxml" translateX="0"/>
+
+
+   <FontIcon fx:id="menu" layoutX="10" layoutY="40" iconLiteral="fas-bars" iconSize="40" iconColor="#545454" onMouseClicked="#iniciarVbox"/>
+
+   <VBox fx:id="vBox" translateX="-150" prefHeight="-Infinity">
+
+      <Label fx:id="labelMenu" alignment="CENTER" text="Menu Administrador">
+         <VBox.margin>
+            <Insets left="5.0" top="10.0"/>
+         </VBox.margin>
+      </Label>
+
+      <Button fx:id="registrar" text="Registrar Usuario" onAction="#iniciarVistaRegistro" >
+         <VBox.margin>
+            <Insets top="20.0" />
+         </VBox.margin>
+         <graphic>
+            <FontIcon iconLiteral="fas-user" iconSize="10" />
+         </graphic>
+      </Button>
+
+      <Button fx:id="registrarServicios"  text="Registrar Servicio" >
+         <VBox.margin>
+            <Insets top="20.0" />
+         </VBox.margin>
+         <graphic>
+            <FontIcon iconLiteral="fas-car-side" iconSize="10" />
+         </graphic>
+      </Button>
+
+      <Button fx:id="citas"  text="Registrar Citas" >
+         <VBox.margin>
+            <Insets top="20.0" />
+         </VBox.margin>
+         <graphic>
+            <FontIcon iconLiteral="far-comment" iconSize="10" />
+         </graphic>
+      </Button>
+
+      <Button fx:id="salir" text="Salir" onAction="#salir" >
+         <VBox.margin>
+            <Insets top="313.0" left="5.0"/>
+         </VBox.margin>
+         <graphic>
+            <FontIcon iconLiteral="fas-door-open" iconSize="10" />
+         </graphic>
+      </Button>
+
+   </VBox>
+
+   <fx:include fx:id="vistaRegistro" source="registrarUsuario.fxml" translateX="2000"/>
+
+</AnchorPane>

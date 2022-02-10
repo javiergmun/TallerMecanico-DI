@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="login" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="700.0" stylesheets="@css/login.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.proyectotallerdi.LoginController">
+
+    <children>
+        <TextField fx:id="usuario" layoutX="276.0" layoutY="250.0" />
+        <PasswordField fx:id="contraseña" layoutX="276.0" layoutY="304.0" />
+        <Text layoutX="321.0" layoutY="300.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Contraseña" />
+        <ImageView fx:id="imagen" fitHeight="120" fitWidth="120" layoutX="290.0" layoutY="91.0">
+            <image>
+                <Image url="@images/logo.png" />
+            </image>
+        </ImageView>
+        <Text layoutX="330.0" layoutY="242.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Usuario" />
+        <Button fx:id="insertar" layoutX="295.0" layoutY="341.0" onAction="#iniciar" text="Insertar" />
+        <Button fx:id="borrar" layoutX="365.0" layoutY="341.0" onAction="#borrarCampos" text="Borrar" />
+    </children>
+
+</AnchorPane>
