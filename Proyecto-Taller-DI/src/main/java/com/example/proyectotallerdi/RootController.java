@@ -4,7 +4,9 @@ import javafx.animation.Animation;
 import javafx.animation.KeyFrame;
 import javafx.animation.Timeline;
 import javafx.fxml.FXML;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
+import javafx.scene.control.ButtonType;
 import javafx.scene.control.Label;
 import javafx.scene.effect.DropShadow;
 import javafx.scene.layout.AnchorPane;
@@ -12,6 +14,8 @@ import javafx.scene.layout.VBox;
 import javafx.util.Duration;
 import org.kordamp.ikonli.Ikonli;
 import org.kordamp.ikonli.javafx.FontIcon;
+
+import java.util.Optional;
 
 public class RootController {
     @FXML
@@ -30,8 +34,6 @@ public class RootController {
 
     @FXML
     private AnchorPane login;
-
-    private LoginController loginController = new LoginController();
 
     private Animation animacion;
 
@@ -75,7 +77,16 @@ public class RootController {
 
     @FXML
     public void salir() {
-        System.exit(0);
+        Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+        alert.setHeaderText(null);
+        alert.setTitle("Confirmación");
+        alert.setContentText("¿Estas seguro de que quieres salir?");
+        Optional<ButtonType> action = alert.showAndWait();
+        if (action.get() == ButtonType.OK) {
+            System.exit(0);
+        } else {
+        }
+
     }
 
 }

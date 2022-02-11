@@ -1,7 +1,9 @@
 
 #login{
-    -fx-background-color: #8383d2;
-    -fx-background-repeat: stretch;
-    -fx-background-size: cover;
+    -fx-background-color: #86bec5;
+    -fx-max-width: Infinity;
+    max-width: Infinity;
+    -fx-max-height: Infinity;
+    max-height: Infinity;
 }
 

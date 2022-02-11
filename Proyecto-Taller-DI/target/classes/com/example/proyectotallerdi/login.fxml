@@ -8,7 +8,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane fx:id="login" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="700.0" stylesheets="@css/login.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.proyectotallerdi.LoginController">
+<AnchorPane fx:id="login" prefHeight="600.0" prefWidth="800.0" stylesheets="@css/login.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.proyectotallerdi.LoginController">
 
     <children>
         <TextField fx:id="usuario" layoutX="276.0" layoutY="250.0" />
@@ -16,12 +16,14 @@
         <Text layoutX="321.0" layoutY="300.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Contraseña" />
         <ImageView fx:id="imagen" fitHeight="120" fitWidth="120" layoutX="290.0" layoutY="91.0">
             <image>
-                <Image url="@images/logo.png" />
+                <Image url="@images/logo.png"/>
             </image>
         </ImageView>
         <Text layoutX="330.0" layoutY="242.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Usuario" />
-        <Button fx:id="insertar" layoutX="295.0" layoutY="341.0" onAction="#iniciar" text="Insertar" />
+        <Button fx:id="insertar" layoutX="295.0" layoutY="341.0" onAction="#sinRellenar" text="Insertar" />
         <Button fx:id="borrar" layoutX="365.0" layoutY="341.0" onAction="#borrarCampos" text="Borrar" />
+        <Text fx:id="rellenar" layoutX="260.0" layoutY="400.0" strokeType="OUTSIDE" strokeWidth="0.0" text="No se han rellenado todos los campos" visible="false" />
+
     </children>
 
 </AnchorPane>
