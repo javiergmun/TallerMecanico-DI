@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Text?>
+<?import org.kordamp.ikonli.javafx.FontIcon?>
+
+<?import javafx.scene.image.Image?>
+<?import java.lang.String?>
+<AnchorPane fx:id="servicios" prefHeight="500.0" prefWidth="700.0" stylesheets="@css/servicio.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.proyectotallerdi.ServicioController">
+   <children>
+      <ListView fx:id="listaServicios" layoutX="58.0" prefHeight="500.0" prefWidth="230.0" />
+      <Button layoutX="148.0" layoutY="440.0" mnemonicParsing="false" text="Añadir" onAction="#cargarLista"/>
+      <FontIcon fx:id="volver" iconLiteral="fas-arrow-circle-left" iconSize="30" layoutX="14.0" layoutY="261.0" onMouseClicked="#volver" />
+      <AnchorPane layoutX="288.0" prefHeight="500.0" prefWidth="412.0">
+         <children>
+            <ImageView fitHeight="132.0" fitWidth="182.0" layoutX="101.0" layoutY="39.0" pickOnBounds="true" preserveRatio="true" />
+            <Text layoutX="195.0" layoutY="251.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nombre" />
+            <Text layoutX="169.0" layoutY="290.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Descripcion Larga" />
+            <Text layoutX="195.0" layoutY="442.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Precio" />
+            <Button layoutX="342.0" layoutY="461.0" mnemonicParsing="false" text="Borrar" />
+            <ImageView fitHeight="41.0" fitWidth="51.0" layoutX="370.0" pickOnBounds="true" preserveRatio="true" >
+               <image>
+                  <Image url="@images/logo.png"/>
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

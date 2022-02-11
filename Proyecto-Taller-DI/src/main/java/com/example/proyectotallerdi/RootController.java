@@ -28,6 +28,9 @@ public class RootController {
     private AnchorPane vistaRegistro;
 
     @FXML
+    private AnchorPane vistaServicio;
+
+    @FXML
     private VBox vBox;
     @FXML
     private FontIcon menu;
@@ -37,6 +40,7 @@ public class RootController {
 
     private Animation animacion;
 
+    private ServicioController servicioController;
     @FXML
     public void iniciarVbox() {
 
@@ -73,6 +77,18 @@ public class RootController {
             vistaRegistro.setTranslateX(0);
             animacion.stop();
         }
+    }
+
+    @FXML
+    public void iniciarVistaServicio(){
+        menu.setTranslateX(0);
+        menu.setIconLiteral("fas-bars");
+        vBox.setTranslateX(-150);
+        vistaLogin.setTranslateY(1500);
+        vistaServicio.setTranslateX(0);
+        vistaServicio.setTranslateZ(20);
+
+
     }
 
     @FXML

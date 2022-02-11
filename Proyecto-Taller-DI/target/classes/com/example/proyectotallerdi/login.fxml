@@ -8,7 +8,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane fx:id="login" prefHeight="600.0" prefWidth="800.0" stylesheets="@css/login.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.proyectotallerdi.LoginController">
+<AnchorPane fx:id="login" prefHeight="500.0" prefWidth="700.0" stylesheets="@css/login.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.proyectotallerdi.LoginController">
 
     <children>
         <TextField fx:id="usuario" layoutX="276.0" layoutY="250.0" />
