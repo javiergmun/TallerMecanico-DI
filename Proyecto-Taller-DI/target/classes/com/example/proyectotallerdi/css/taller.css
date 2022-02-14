@@ -6,9 +6,12 @@
     -fx-background-color: white;
 }
 
+#bienvenida{
+    -fx-font-size: 150%;
+    -fx-font-family: Papyrus ;
+}
 #vBox {
     -fx-background-color: #BC070E;
-
 }
 
 #labelMenu {

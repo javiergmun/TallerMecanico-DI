@@ -31,6 +31,9 @@ public class RootController {
     private AnchorPane vistaServicio;
 
     @FXML
+    private AnchorPane vistaCitas;
+
+    @FXML
     private VBox vBox;
     @FXML
     private FontIcon menu;
@@ -91,6 +94,14 @@ public class RootController {
 
     }
 
+    @FXML
+    public void iniciarVistaCitas(){
+        menu.setTranslateX(0);
+        menu.setIconLiteral("fas-bars");
+        vBox.setTranslateX(-150);
+        vistaLogin.setTranslateY(1500);
+        vistaCitas.setTranslateY(0);
+    }
     @FXML
     public void salir() {
         Alert alert = new Alert(Alert.AlertType.CONFIRMATION);

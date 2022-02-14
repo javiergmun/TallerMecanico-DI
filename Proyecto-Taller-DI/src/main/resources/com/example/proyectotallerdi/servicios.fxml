@@ -6,9 +6,9 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Text?>
 <?import org.kordamp.ikonli.javafx.FontIcon?>
-
 <?import javafx.scene.image.Image?>
-<?import java.lang.String?>
+
+
 <AnchorPane fx:id="servicios" prefHeight="500.0" prefWidth="700.0" stylesheets="@css/servicio.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.proyectotallerdi.ServicioController">
    <children>
       <ListView fx:id="listaServicios" layoutX="58.0" prefHeight="500.0" prefWidth="230.0" />
@@ -20,7 +20,7 @@
             <Text layoutX="195.0" layoutY="251.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nombre" />
             <Text layoutX="169.0" layoutY="290.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Descripcion Larga" />
             <Text layoutX="195.0" layoutY="442.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Precio" />
-            <Button layoutX="342.0" layoutY="461.0" mnemonicParsing="false" text="Borrar" />
+            <Button layoutX="342.0" layoutY="461.0" mnemonicParsing="false" text="Borrar" onAction="#quitarServicio" />
             <ImageView fitHeight="41.0" fitWidth="51.0" layoutX="370.0" pickOnBounds="true" preserveRatio="true" >
                <image>
                   <Image url="@images/logo.png"/>
