@@ -25,8 +25,6 @@ public class LoginController {
     private Text rellenar;
 
 
-
-
     public void borrarCampos() {
         contraseña.setText("");
         usuario.setText("");

@@ -44,6 +44,7 @@ public class RootController {
     private Animation animacion;
 
     private ServicioController servicioController;
+
     @FXML
     public void iniciarVbox() {
 
@@ -83,7 +84,7 @@ public class RootController {
     }
 
     @FXML
-    public void iniciarVistaServicio(){
+    public void iniciarVistaServicio() {
         menu.setTranslateX(0);
         menu.setIconLiteral("fas-bars");
         vBox.setTranslateX(-150);
@@ -95,13 +96,14 @@ public class RootController {
     }
 
     @FXML
-    public void iniciarVistaCitas(){
+    public void iniciarVistaCitas() {
         menu.setTranslateX(0);
         menu.setIconLiteral("fas-bars");
         vBox.setTranslateX(-150);
         vistaLogin.setTranslateY(1500);
         vistaCitas.setTranslateY(0);
     }
+
     @FXML
     public void salir() {
         Alert alert = new Alert(Alert.AlertType.CONFIRMATION);

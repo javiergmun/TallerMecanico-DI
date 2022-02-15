@@ -9,7 +9,7 @@ public class CitasController {
     private AnchorPane citas;
 
 
-    public void volver(){
+    public void volver() {
         citas.setTranslateY(2000);
     }
 }

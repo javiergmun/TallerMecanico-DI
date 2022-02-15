@@ -41,6 +41,7 @@ public class RegistrarUsuarioController {
         telefono.setText("");
         contraseña.setText("");
     }
+
     @FXML
     public void sinRellenar() {
         if (nombre.getText() == "" | email.getText() == ""
@@ -51,7 +52,7 @@ public class RegistrarUsuarioController {
             alert.setContentText("No has rellenado todos los campos");
             alert.showAndWait();
             rellenar.setVisible(true);
-        }else
+        } else
             vistaRegistroUsuario.setTranslateX(2000);
     }
 }

@@ -1,8 +1,5 @@
 
 #root {
-    -fx-background-repeat: stretch;
-    -fx-background-size: cover;
-    -fx-background-position: top left;
     -fx-background-color: white;
 }
 

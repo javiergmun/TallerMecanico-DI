@@ -1,6 +1,5 @@
 package com.example.proyectotallerdi;
 
-import javafx.beans.Observable;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
@@ -24,20 +23,20 @@ public class ServicioController {
     private FontIcon volver;
 
     @FXML
-    public void volver(){
+    public void volver() {
         servicios.setTranslateX(-2000);
     }
 
     @FXML
-    public void cargarLista(){
+    public void cargarLista() {
 
-        ObservableList<String> nombres= FXCollections.observableArrayList("Aceite","Pintura","Equilibrado de ruedas");
+        ObservableList<String> nombres = FXCollections.observableArrayList("Aceite", "Pintura", "Equilibrado de ruedas");
         listaServicios.setItems(nombres);
 
     }
 
     @FXML
-    public void quitarServicio(){
+    public void quitarServicio() {
 
         Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
         alert.setHeaderText(null);
@@ -50,7 +49,6 @@ public class ServicioController {
 
         }
     }
-
 
 
 }
