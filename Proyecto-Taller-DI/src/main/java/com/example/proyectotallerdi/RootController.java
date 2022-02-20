@@ -15,7 +15,9 @@ import javafx.util.Duration;
 import org.kordamp.ikonli.Ikonli;
 import org.kordamp.ikonli.javafx.FontIcon;
 
+import java.util.Locale;
 import java.util.Optional;
+import java.util.ResourceBundle;
 
 public class RootController {
     @FXML
@@ -92,7 +94,6 @@ public class RootController {
         vistaServicio.setTranslateX(0);
         vistaServicio.setTranslateZ(20);
 
-
     }
 
     @FXML
@@ -115,6 +116,17 @@ public class RootController {
             System.exit(0);
         } else {
         }
+
+    }
+
+    @FXML
+    public void cambiarIdioma(){
+
+        Locale localizacion = new Locale("en", "UK");
+
+        ResourceBundle resourceBundle = ResourceBundle.getBundle("com.example.proyectotallerdi.internacionalizacion.strings", localizacion);
+
+
 
     }
 

@@ -16,19 +16,19 @@
         <TextField fx:id="email" layoutX="147.0" layoutY="268.0"/>
         <TextField fx:id="telefono" layoutX="404.0" layoutY="208.0"/>
         <TextField fx:id="direccion" layoutX="404.0" layoutY="268.0"/>
-        <Text layoutX="205.0" layoutY="204.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Usuario"/>
-        <Text layoutX="207.0" layoutY="263.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Email"/>
-        <Text layoutX="191.0" layoutY="325.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Contraseña"/>
-        <Text layoutX="446.0" layoutY="203.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nº Telefono"/>
-        <Text layoutX="453.0" layoutY="263.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Direccion"/>
+        <Text layoutX="205.0" layoutY="204.0" strokeType="OUTSIDE" strokeWidth="0.0" text="%usuario"/>
+        <Text layoutX="207.0" layoutY="263.0" strokeType="OUTSIDE" strokeWidth="0.0" text="%email"/>
+        <Text layoutX="191.0" layoutY="325.0" strokeType="OUTSIDE" strokeWidth="0.0" text="%contraseña"/>
+        <Text layoutX="446.0" layoutY="203.0" strokeType="OUTSIDE" strokeWidth="0.0" text="%telefono"/>
+        <Text layoutX="453.0" layoutY="263.0" strokeType="OUTSIDE" strokeWidth="0.0" text="%direccion"/>
         <FontIcon iconLiteral="far-address-book" iconSize="50" layoutX="457.0" layoutY="155.0"/>
-        <Button layoutX="418.0" layoutY="329.0" mnemonicParsing="false" text="Aceptar" onAction="#sinRellenar"/>
-        <Button layoutX="484.0" layoutY="329.0" mnemonicParsing="false" text="Borrar" onAction="#borrarCampos"/>
+        <Button layoutX="418.0" layoutY="329.0" mnemonicParsing="false" text="%insertar" onAction="#sinRellenar"/>
+        <Button layoutX="484.0" layoutY="329.0" mnemonicParsing="false" text="%borrar" onAction="#borrarCampos"/>
         <PasswordField fx:id="contraseña" layoutX="151.0" layoutY="329.0"/>
         <FontIcon fx:id="volver" iconLiteral="fas-arrow-circle-left" iconSize="30" layoutX="320.0" layoutY="79.0"
                   onMouseClicked="#volverVista"/>
         <Text fx:id="rellenar" layoutX="400.0" layoutY="400.0" strokeType="OUTSIDE" strokeWidth="0.0"
-              text="No se han rellenado todos los campos" visible="false"/>
+              text="%rellenar" visible="false"/>
 
     </children>
 </AnchorPane>
