@@ -73,7 +73,7 @@
 
     <fx:include fx:id="vistaRegistro" source="registrarUsuario.fxml" translateX="2000" />
 
-    <fx:include fx:id="vistaServicio" source="servicios.fxml" translateZ="-2000" />
+    <fx:include fx:id="vistaServicio" source="servicio.fxml" translateZ="-2000" />
 
     <fx:include fx:id="vistaCitas" source="citas.fxml" translateY="-2000" />
 
