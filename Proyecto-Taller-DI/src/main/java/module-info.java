@@ -7,7 +7,7 @@ module com.example.proyectotallerdi {
     requires retrofit2;
     requires retrofit2.converter.gson;
     requires com.google.gson;
-
+    requires lombok;
 
     opens com.example.proyectotallerdi to javafx.fxml;
     opens com.example.proyectotallerdi.entity to javafx.fxml;
@@ -15,5 +15,6 @@ module com.example.proyectotallerdi {
     exports com.example.proyectotallerdi;
     exports com.example.proyectotallerdi.entity;
     exports com.example.proyectotallerdi.rest;
+
 
 }
