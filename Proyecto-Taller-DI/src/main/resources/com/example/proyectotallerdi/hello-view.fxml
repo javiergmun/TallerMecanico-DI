@@ -71,10 +71,6 @@
 
     <Text fx:id="bienvenida" layoutX="250" layoutY="70" text="%bienvenida" />
 
-    <!--<ImageView fx:id="prueba" layoutX="200" layoutY="200">
-        <Image url="@images/taller.jpg"/>
-    </ImageView>-->
-
     <fx:include fx:id="vistaRegistro" source="registrarUsuario.fxml" translateX="2000" />
 
     <fx:include fx:id="vistaServicio" source="servicios.fxml" translateZ="-2000" />
