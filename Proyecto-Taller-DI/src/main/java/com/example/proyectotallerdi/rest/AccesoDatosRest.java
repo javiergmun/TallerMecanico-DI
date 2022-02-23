@@ -27,7 +27,7 @@ public interface AccesoDatosRest {
     Call<Login> usersCreate(@Body Login login);
 
     @POST("usuarios/{id}/citas")
-    Call<Cita> usersCreate(@Path("id") String id ,@Body Cita cita);
+    Call<Cita> usersCreate(@Path("id") String id, @Body Cita cita);
 
 
     @PUT("usuarios/{id}")
@@ -61,12 +61,12 @@ public interface AccesoDatosRest {
     //CITAS
 
     @GET("citas")
-    Call<List<Servicio>> citasGetAll();
+    Call<List<Cita>> citasGetAll();
 
     @GET("citas/{id}")
-    Call<Servicio> citasGetById(@Path("id") String id);
+    Call<Cita> citasGetById(@Path("id") String id);
 
     @DELETE("citas/{id}")
-    Call<Servicio> citasDelete(@Path("id") String id);
+    Call<Cita> citasDelete(@Path("id") String id);
 }
 

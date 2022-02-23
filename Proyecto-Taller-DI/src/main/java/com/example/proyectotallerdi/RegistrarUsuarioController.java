@@ -55,4 +55,7 @@ public class RegistrarUsuarioController {
         } else
             vistaRegistroUsuario.setTranslateX(2000);
     }
+
+
+
 }
