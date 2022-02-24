@@ -7,7 +7,7 @@ module com.example.proyectotallerdi {
     requires retrofit2;
     requires retrofit2.converter.gson;
     requires com.google.gson;
-    requires lombok;
+    requires static lombok;
 
     opens com.example.proyectotallerdi to javafx.fxml;
     opens com.example.proyectotallerdi.entity to javafx.fxml;

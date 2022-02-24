@@ -1,6 +1,5 @@
 package com.example.proyectotallerdi.rest;
 
-
 import com.example.proyectotallerdi.entity.*;
 import retrofit2.Call;
 import retrofit2.http.*;
@@ -29,14 +28,11 @@ public interface AccesoDatosRest {
     @POST("usuarios/{id}/citas")
     Call<Cita> usersCreate(@Path("id") String id, @Body Cita cita);
 
-
     @PUT("usuarios/{id}")
     Call<Usuario> userUpdate(@Path("id") String id, @Body Usuario user);
 
-
     @DELETE("usuarios/{id}")
     Call<Usuario> userDelete(@Path("id") String id);
-
 
     //SERVICIOS
 
@@ -46,14 +42,11 @@ public interface AccesoDatosRest {
     @GET("servicios/{id}")
     Call<Servicio> serviciosGetById(@Path("id") String id);
 
-
     @POST("servicios")
     Call<Servicio> serviciosCreate(@Body Servicio servicio);
 
-
     @PUT("servicios/{id}")
     Call<Servicio> serviciosUpdate(@Path("id") String id, @Body Servicio servicio);
-
 
     @DELETE("servicios/{id}")
     Call<Servicio> serviciosDelete(@Path("id") String id);
@@ -68,5 +61,5 @@ public interface AccesoDatosRest {
 
     @DELETE("citas/{id}")
     Call<Cita> citasDelete(@Path("id") String id);
-}
 
+}

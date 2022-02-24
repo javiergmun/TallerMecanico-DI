@@ -1,13 +1,13 @@
 package com.example.proyectotallerdi;
 
+import com.example.proyectotallerdi.entity.Cita;
 import javafx.animation.Animation;
 import javafx.animation.KeyFrame;
 import javafx.animation.Timeline;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
-import javafx.scene.control.Alert;
-import javafx.scene.control.Button;
-import javafx.scene.control.ButtonType;
-import javafx.scene.control.Label;
+import javafx.scene.control.*;
 import javafx.scene.effect.DropShadow;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.VBox;
@@ -47,6 +47,23 @@ public class RootController {
 
     private ServicioController servicioController;
 
+    @FXML
+    private ListView<Cita> citasHoy;
+
+    @FXML
+    public void initialize(){
+        ObservableList<Cita> citas = FXCollections.observableArrayList(
+                //new Cita(1,3.4,"","","","")
+        );
+
+        citasHoy.setItems(citas);
+        citasHoy.getSelectionModel().selectedItemProperty().addListener((observable, oldValue, newValue) -> {
+            if (newValue != null){
+
+            }
+
+        });
+    }
     @FXML
     public void iniciarVbox() {
 
