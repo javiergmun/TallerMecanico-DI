@@ -11,28 +11,28 @@ public interface AccesoDatosRest {
     //USUARIOS
 
     @GET("usuarios")
-    Call<List<Usuario>> personasGetAll();
+    Call<List<Usuario>> usuarioGetAll();
 
     @GET("usuarios/{id}")
-    Call<Usuario> personaGetById(@Path("id") String id);
+    Call<Usuario> usuarioGetById(@Path("id") String id);
 
     @GET("usuarios/{id}/vehiculos")
     Call<List<Vehiculo>> usuarioGetVehiculos(@Path("id") String id);
 
     @POST("usuarios")
-    Call<Usuario> usersCreate(@Body Usuario user);
+    Call<Usuario> usuarioCreate(@Body Usuario user);
 
     @POST("login")
-    Call<Login> usersCreate(@Body Login login);
+    Call<Login> loginCreate(@Body Login login);
 
     @POST("usuarios/{id}/citas")
-    Call<Cita> usersCreate(@Path("id") String id, @Body Cita cita);
+    Call<Cita> usuarioCitaCreate(@Path("id") String id, @Body Cita cita);
 
     @PUT("usuarios/{id}")
-    Call<Usuario> userUpdate(@Path("id") String id, @Body Usuario user);
+    Call<Usuario> usarioUpdate(@Path("id") String id, @Body Usuario user);
 
     @DELETE("usuarios/{id}")
-    Call<Usuario> userDelete(@Path("id") String id);
+    Call<Usuario> usuarioDelete(@Path("id") String id);
 
     //SERVICIOS
 

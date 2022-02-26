@@ -17,9 +17,6 @@ public class Servicio {
     private Double precio;
     private String tipo;
     private Double tiempo;
-    private LocalDateTime fecha_inicio;
-    private LocalDateTime fecha_fin;
-    private boolean activo = true;
 
 
     public long getId() {
@@ -54,20 +51,6 @@ public class Servicio {
     }
 
 
-    public LocalDateTime getFecha_inicio() {
-        return fecha_inicio;
-    }
-    public void setFecha_inicio(LocalDateTime fecha_inicio) {
-        this.fecha_inicio = fecha_inicio;
-    }
-
-
-    public LocalDateTime getFecha_fin() {
-        return fecha_fin;
-    }
-    public void setFecha_fin(LocalDateTime fecha_fin) {
-        this.fecha_fin = fecha_fin;
-    }
 
 
     @Override
@@ -77,8 +60,6 @@ public class Servicio {
                 ", precio=" + precio +
                 ", tipo='" + tipo + '\'' +
                 ", tiempo=" + tiempo +
-                ", fecha_inicio=" + fecha_inicio +
-                ", fecha_fin=" + fecha_fin +
                 '}';
     }
 }

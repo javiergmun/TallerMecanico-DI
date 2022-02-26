@@ -6,7 +6,7 @@ public class APIRestConfig {
     }
 
     public static AccesoDatosRest getService() {
-        return RetrofitRestClient.getClient("https://jsonplaceholder.typicode.com/").create(AccesoDatosRest.class);
+        return RetrofitRestClient.getClient("http://localhost:8080/").create(AccesoDatosRest.class);
     }
 
 }

@@ -10,8 +10,8 @@ module com.example.proyectotallerdi {
     requires static lombok;
 
     opens com.example.proyectotallerdi to javafx.fxml;
-    opens com.example.proyectotallerdi.entity to javafx.fxml;
-    opens com.example.proyectotallerdi.rest to javafx.fxml;
+    opens com.example.proyectotallerdi.entity to javafx.fxml, com.google.gson;
+    opens com.example.proyectotallerdi.rest to javafx.fxml, com.google.gson;
     exports com.example.proyectotallerdi;
     exports com.example.proyectotallerdi.entity;
     exports com.example.proyectotallerdi.rest;

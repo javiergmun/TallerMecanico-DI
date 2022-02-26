@@ -1,6 +1,8 @@
 package com.example.proyectotallerdi;
 
 import com.example.proyectotallerdi.entity.Cita;
+import com.example.proyectotallerdi.rest.APIRestConfig;
+import com.example.proyectotallerdi.rest.AccesoDatosRest;
 import javafx.animation.Animation;
 import javafx.animation.KeyFrame;
 import javafx.animation.Timeline;
@@ -14,12 +16,16 @@ import javafx.scene.layout.VBox;
 import javafx.util.Duration;
 import org.kordamp.ikonli.Ikonli;
 import org.kordamp.ikonli.javafx.FontIcon;
+import retrofit2.Response;
 
+import java.io.IOException;
+import java.util.List;
 import java.util.Locale;
 import java.util.Optional;
 import java.util.ResourceBundle;
 
 public class RootController {
+    private AccesoDatosRest restService = APIRestConfig.getService();
     @FXML
     private AnchorPane root;
 
@@ -52,8 +58,9 @@ public class RootController {
 
     @FXML
     public void initialize(){
+
         ObservableList<Cita> citas = FXCollections.observableArrayList(
-                //new Cita(1,3.4,"","","","")
+               // cargarCitas().get(0)
         );
 
         citasHoy.setItems(citas);
@@ -64,6 +71,31 @@ public class RootController {
 
         });
     }
+    private ObservableList<Cita> cargarCitas() {
+        List<Cita> noObservable = getCitas();
+        if (noObservable != null) {
+            return FXCollections.observableArrayList(noObservable);
+        } else {
+            return null;
+        }
+    }
+
+    private List<Cita> getCitas() {
+        try {
+            Response<List<Cita>> response = restService.citasGetAll().execute();
+            if (response.isSuccessful() && response.body() != null) {
+                return response.body();
+            } else {
+                System.out.println("Error: " + response.code());
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
+
+
+
     @FXML
     public void iniciarVbox() {
 

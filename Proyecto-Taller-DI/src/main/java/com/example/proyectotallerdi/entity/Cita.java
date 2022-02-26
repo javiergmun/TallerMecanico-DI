@@ -11,7 +11,6 @@ import java.time.LocalDateTime;
 public class Cita {
 
     private long id;
-    private Double precio;
     private LocalDateTime fecha;
     private Usuario usuario;
     private Mecanico mecanico;
@@ -19,9 +18,6 @@ public class Cita {
 
     public long getId() {return id;}
     public void setId(long id) {this.id = id;}
-
-    public Double getPrecio() {return precio;}
-    public void setPrecio(Double precio) {this.precio = precio;}
 
     public LocalDateTime getFecha() {return fecha;}
     public void setFecha(LocalDateTime fecha) {this.fecha = fecha;}
@@ -39,7 +35,6 @@ public class Cita {
     public String toString() {
         return "Ticket{" +
                 "id=" + id +
-                ", precio=" + precio +
                 ", fecha=" + fecha +
                 ", usuario=" + usuario +
                 ", mecanico=" + mecanico +
