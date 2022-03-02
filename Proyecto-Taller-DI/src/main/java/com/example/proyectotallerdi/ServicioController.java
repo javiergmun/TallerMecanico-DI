@@ -17,6 +17,7 @@ import retrofit2.Response;
 
 import java.io.IOException;
 import java.util.List;
+import java.util.Locale;
 import java.util.Optional;
 
 public class ServicioController {
@@ -46,7 +47,7 @@ public class ServicioController {
         listaServicios.getSelectionModel().selectedItemProperty().addListener((observable, oldValue, newValue) -> {
             if (newValue != null){
                 //No hay descripcion para servicios en la API
-                nombre.setText(newValue.getTipo());
+                nombre.setText(newValue.getTipo().toUpperCase(Locale.ROOT));
                 precio.setText(String.valueOf(newValue.getPrecio()));
             }
         });

@@ -7,28 +7,30 @@
 <?import javafx.scene.text.Text?>
 <?import org.kordamp.ikonli.javafx.FontIcon?>
 
-<AnchorPane fx:id="vistaRegistroUsuario" prefHeight="500.0" prefWidth="700.0" stylesheets="@css/registrarUsuario.css"
-            xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1"
-            fx:controller="com.example.proyectotallerdi.RegistrarUsuarioController">
+<AnchorPane fx:id="vistaRegistroUsuario" prefHeight="500.0" prefWidth="700.0" stylesheets="@css/registrarUsuario.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.proyectotallerdi.RegistrarUsuarioController">
     <children>
-        <FontIcon iconLiteral="fas-user" iconSize="50" layoutX="200.0" layoutY="155.0"/>
-        <TextField fx:id="nombre" layoutX="147.0" layoutY="208.0"/>
-        <TextField fx:id="email" layoutX="147.0" layoutY="268.0"/>
-        <TextField fx:id="telefono" layoutX="404.0" layoutY="208.0"/>
-        <TextField fx:id="direccion" layoutX="404.0" layoutY="268.0"/>
-        <Text layoutX="205.0" layoutY="204.0" strokeType="OUTSIDE" strokeWidth="0.0" text="%usuario"/>
-        <Text layoutX="207.0" layoutY="263.0" strokeType="OUTSIDE" strokeWidth="0.0" text="%email"/>
-        <Text layoutX="191.0" layoutY="325.0" strokeType="OUTSIDE" strokeWidth="0.0" text="%contraseña"/>
-        <Text layoutX="446.0" layoutY="203.0" strokeType="OUTSIDE" strokeWidth="0.0" text="%telefono"/>
-        <Text layoutX="453.0" layoutY="263.0" strokeType="OUTSIDE" strokeWidth="0.0" text="%direccion"/>
-        <FontIcon iconLiteral="far-address-book" iconSize="50" layoutX="457.0" layoutY="155.0"/>
-        <Button layoutX="418.0" layoutY="329.0" mnemonicParsing="false" text="%insertar" onAction="#sinRellenar"/>
-        <Button layoutX="484.0" layoutY="329.0" mnemonicParsing="false" text="%borrar" onAction="#borrarCampos"/>
-        <PasswordField fx:id="contraseña" layoutX="151.0" layoutY="329.0"/>
-        <FontIcon fx:id="volver" iconLiteral="fas-arrow-circle-left" iconSize="30" layoutX="320.0" layoutY="79.0"
-                  onMouseClicked="#volverVista"/>
-        <Text fx:id="rellenar" layoutX="400.0" layoutY="400.0" strokeType="OUTSIDE" strokeWidth="0.0"
-              text="%rellenar" visible="false"/>
+        <FontIcon iconLiteral="fas-user" iconSize="50" layoutX="200.0" layoutY="155.0" />
+
+        <TextField fx:id="nombreField" layoutX="147.0" layoutY="208.0" />
+        <TextField fx:id="emailField" layoutX="147.0" layoutY="268.0" />
+        <TextField fx:id="telefonoField" layoutX="404.0" layoutY="208.0" />
+        <TextField fx:id="direccionField" layoutX="404.0" layoutY="268.0" />
+        <TextField fx:id="dniField" layoutX="404.0" layoutY="329.0" />
+        <PasswordField fx:id="contraseñaField" layoutX="151.0" layoutY="329.0" />
+
+        <Text layoutX="205.0" layoutY="204.0" strokeType="OUTSIDE" strokeWidth="0.0" text="%usuario" />
+        <Text layoutX="207.0" layoutY="263.0" strokeType="OUTSIDE" strokeWidth="0.0" text="%email" />
+        <Text layoutX="191.0" layoutY="325.0" strokeType="OUTSIDE" strokeWidth="0.0" text="%contraseña" />
+        <Text layoutX="446.0" layoutY="203.0" strokeType="OUTSIDE" strokeWidth="0.0" text="%telefono" />
+        <Text layoutX="453.0" layoutY="263.0" strokeType="OUTSIDE" strokeWidth="0.0" text="%direccion" />
+        <Text layoutX="468.0" layoutY="325.0" strokeType="OUTSIDE" strokeWidth="0.0" text="DNI" />
+
+        <FontIcon iconLiteral="far-address-book" iconSize="50" layoutX="457.0" layoutY="155.0" />
+        <Button layoutX="413.0" layoutY="375.0" mnemonicParsing="false" onAction="#sinRellenar" text="%insertar" />
+        <Button layoutX="482.0" layoutY="375.0" mnemonicParsing="false" onAction="#borrarCampos" text="%borrar" />
+        <FontIcon fx:id="volver" iconLiteral="fas-arrow-circle-left" iconSize="30" layoutX="320.0" layoutY="79.0" onMouseClicked="#volverVista" />
+        <Text fx:id="rellenar" layoutX="400.0" layoutY="400.0" strokeType="OUTSIDE" strokeWidth="0.0" text="%rellenar" visible="false" />
+
 
     </children>
 </AnchorPane>

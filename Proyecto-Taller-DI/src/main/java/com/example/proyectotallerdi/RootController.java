@@ -57,16 +57,34 @@ public class RootController {
     private ListView<Cita> citasHoy;
 
     @FXML
+    private TextField textHora;
+    @FXML
+    private TextField textUsuario;
+    @FXML
+    private TextField textServicio;
+    @FXML
+    private TextField textPrecio;
+    @FXML
+    private TextField textMarca;
+    @FXML
+    private TextField textModelo;
+
+    @FXML
     public void initialize(){
 
         ObservableList<Cita> citas = FXCollections.observableArrayList(
-               // cargarCitas().get(0)
+                cargarCitas()
         );
 
         citasHoy.setItems(citas);
         citasHoy.getSelectionModel().selectedItemProperty().addListener((observable, oldValue, newValue) -> {
             if (newValue != null){
-
+                textHora.setText(newValue.getFecha().substring(11,16));
+                textUsuario.setText(newValue.getUsuario().getNombre());
+                textServicio.setText(newValue.getServicio().getTipo());
+                textPrecio.setText(String.valueOf(newValue.getServicio().getPrecio()));
+                textMarca.setText(newValue.getUsuario().getVehiculos().toString());
+                textModelo.setText(newValue.getUsuario().getVehiculos().toString());
             }
 
         });

@@ -55,11 +55,6 @@ public class Servicio {
 
     @Override
     public String toString() {
-        return "Servicio{" +
-                "id=" + id +
-                ", precio=" + precio +
-                ", tipo='" + tipo + '\'' +
-                ", tiempo=" + tiempo +
-                '}';
+        return tipo;
     }
 }

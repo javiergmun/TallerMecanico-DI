@@ -56,17 +56,6 @@ public class Usuario {
 
     @Override
     public String toString() {
-        return "Usuario{" +
-                "id=" + id +
-                ", dni='" + dni + '\'' +
-                ", nombre='" + nombre + '\'' +
-                ", administrador=" + administrador +
-                ", telefono=" + telefono +
-                ", direccion=" + direccion +
-                ", correo='" + correo + '\'' +
-                ", password='" + password + '\'' +
-                ", vehiculos=" + vehiculos +
-                ", login="+ login +
-                '}';
+        return nombre;
     }
 }
