@@ -68,6 +68,8 @@ public class RootController {
     private TextField textMarca;
     @FXML
     private TextField textModelo;
+    @FXML
+    private TextField textMecanico;
 
     @FXML
     public void initialize(){
@@ -83,6 +85,7 @@ public class RootController {
                 textUsuario.setText(newValue.getUsuario().getNombre());
                 textServicio.setText(newValue.getServicio().getTipo());
                 textPrecio.setText(String.valueOf(newValue.getServicio().getPrecio()));
+                textMecanico.setText(newValue.getMecanico().getNombre());
                 textMarca.setText(newValue.getUsuario().getVehiculos().toString());
                 textModelo.setText(newValue.getUsuario().getVehiculos().toString());
             }

@@ -7,13 +7,14 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Text?>
 <?import org.kordamp.ikonli.javafx.FontIcon?>
-
 <?import javafx.scene.control.ListView?>
 <?import javafx.scene.control.TextField?>
+
 <AnchorPane fx:id="root" prefHeight="500.0" prefWidth="700.0" stylesheets="@css/taller.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.proyectotallerdi.RootController">
 
     <FontIcon fx:id="menu" iconColor="#545454" iconLiteral="fas-bars" iconSize="40" layoutX="10" layoutY="40" onMouseClicked="#iniciarVbox" />
 
+    <FontIcon iconLiteral="fab-whmcs" iconSize="40" layoutY="80" layoutX="200"/>
     <VBox fx:id="vBox" prefHeight="-Infinity" translateX="-150">
 
         <Label fx:id="labelMenu" alignment="CENTER" text="%labelMenu">
@@ -75,20 +76,23 @@
     <Text fx:id="bienvenida" layoutX="250" layoutY="70" text="%bienvenida" />
 
     <Label layoutY="180" layoutX="400" text="%cita_i"/>
-    <Label layoutY="220" layoutX="420" text="%hora_i"/>
-    <Label layoutY="260" layoutX="420" text="%usuario_i"/>
-    <Label layoutY="300" layoutX="420" text="%servicio_i"/>
-    <Label layoutY="340" layoutX="420" text="%precio_i"/>
+    <Label layoutY="210" layoutX="420" text="%hora_i"/>
+    <Label layoutY="240" layoutX="420" text="%usuario_i"/>
+    <Label layoutY="270" layoutX="420" text="%servicio_i"/>
+    <Label layoutY="300" layoutX="420" text="%precio_i"/>
+    <Label layoutY="330" layoutX="415" text="%mecanico_i"/>
     <Label layoutY="380" layoutX="400" text="%vehiculo_i"/>
     <Label layoutY="420" layoutX="420" text="%marca_i"/>
     <Label layoutY="460" layoutX="420" text="%modelo_i"/>
 
-    <TextField fx:id="textHora" layoutX="480" layoutY="220" />
-    <TextField fx:id="textUsuario" layoutX="480" layoutY="260" />
-    <TextField fx:id="textServicio" layoutX="480" layoutY="300" />
-    <TextField fx:id="textPrecio" layoutX="480" layoutY="340" />
+    <TextField fx:id="textHora" layoutX="480" layoutY="210" />
+    <TextField fx:id="textUsuario" layoutX="480" layoutY="240" />
+    <TextField fx:id="textServicio" layoutX="480" layoutY="270" />
+    <TextField fx:id="textPrecio" layoutX="480" layoutY="300" />
     <TextField fx:id="textMarca" layoutX="480" layoutY="420" />
     <TextField fx:id="textModelo" layoutX="480" layoutY="460" />
+    <TextField fx:id="textMecanico" layoutX="480" layoutY="330" />
+
 
     <fx:include fx:id="vistaRegistro" source="registrarUsuario.fxml" translateX="2000" />
 

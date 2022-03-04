@@ -76,9 +76,22 @@ public class ServicioController {
         }
         return null;
     }
+    private Servicio deleteServicio(Long id) {
+        try {
+            Response<Servicio> response = restService.serviciosDelete(id).execute();
+            if (response.isSuccessful() && response.body() != null) {
+                return response.body();
+            } else {
+                System.out.println("Error: " + response.code());
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
 
     @FXML
-    public void quitarServicio() {
+    public void quitarServicio() throws IOException {
 
         Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
         alert.setHeaderText(null);
@@ -86,7 +99,9 @@ public class ServicioController {
         alert.setContentText("¿Estas seguro de que quieres borrar el elemento?");
         Optional<ButtonType> action = alert.showAndWait();
         if (action.get() == ButtonType.OK) {
-            listaServicios.getItems().remove(0);
+            int indice= listaServicios.getSelectionModel().getSelectedIndex();
+            listaServicios.getItems().remove(indice);
+            deleteServicio(Long.valueOf(indice));
         } else {
 
         }
