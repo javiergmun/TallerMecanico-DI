@@ -10,6 +10,8 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Alert;
 import javafx.scene.control.ButtonType;
 import javafx.scene.control.ListView;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.text.Text;
 import org.kordamp.ikonli.javafx.FontIcon;
@@ -31,6 +33,8 @@ public class ServicioController {
     @FXML
     private FontIcon volver;
     @FXML
+    private ImageView imagenServicio;
+    @FXML
     private Text nombre;
     @FXML
     private Text descripcion;
@@ -46,9 +50,11 @@ public class ServicioController {
         listaServicios.setItems(nombres);
         listaServicios.getSelectionModel().selectedItemProperty().addListener((observable, oldValue, newValue) -> {
             if (newValue != null){
-                //No hay descripcion para servicios en la API
                 nombre.setText(newValue.getTipo().toUpperCase(Locale.ROOT));
                 precio.setText(String.valueOf(newValue.getPrecio()));
+                descripcion.setText(newValue.getDescripcion());
+                //Añadir imagen al servicio
+                //imagenServicio.setImage(newValue.getImagen());
             }
         });
 

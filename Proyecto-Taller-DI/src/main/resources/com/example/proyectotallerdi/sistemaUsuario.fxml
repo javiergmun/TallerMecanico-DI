@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.PieChart?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import org.kordamp.ikonli.javafx.FontIcon?>
+
+<AnchorPane fx:id="sistemaUsuario" prefHeight="500.0" prefWidth="700.0" stylesheets="@css/sistemaUsuario.css" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.proyectotallerdi.SistemaUsuarioController">
+   <children>
+      <TableView fx:id="usuarios" layoutX="38.0" prefHeight="500.0" prefWidth="347.0">
+        <columns>
+            <TableColumn fx:id="nombre" prefWidth="93.0" text="Nombre" />
+            <TableColumn fx:id="dni" prefWidth="118.0" text="DNI" />
+            <TableColumn fx:id="telefono" prefWidth="140.0" text="Telefono" />
+        </columns>
+      </TableView>
+      <PieChart fx:id="grafico" layoutX="384.0" prefHeight="500.0" prefWidth="315.0" />
+      <FontIcon iconLiteral="fas-angle-right" iconSize="20" layoutX="14.0" layoutY="246.0" onMouseClicked="#volver" />
+   </children>
+</AnchorPane>

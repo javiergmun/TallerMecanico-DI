@@ -10,7 +10,7 @@
 <?import javafx.scene.control.ListView?>
 <?import javafx.scene.control.TextField?>
 
-<AnchorPane fx:id="root" prefHeight="500.0" prefWidth="700.0" stylesheets="@css/taller.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.proyectotallerdi.RootController">
+<AnchorPane fx:id="root" prefHeight="500.0" prefWidth="700.0" stylesheets="@css/taller.css" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.proyectotallerdi.RootController">
 
     <FontIcon fx:id="menu" iconColor="#545454" iconLiteral="fas-bars" iconSize="40" layoutX="10" layoutY="40" onMouseClicked="#iniciarVbox" />
 
@@ -50,12 +50,12 @@
             </graphic>
         </Button>
 
-        <Button fx:id="idioma" text="Idioma">
+        <Button fx:id="usuarioBBD" text="Usuarios Sistema" onAction="#iniciarVistaSistema">
             <VBox.margin>
                 <Insets top="20" />
             </VBox.margin>
             <graphic>
-                <FontIcon iconLiteral="fas-atlas" iconSize="10" />
+                <FontIcon iconLiteral="fas-house-user" iconSize="10" />
             </graphic>
         </Button>
 
@@ -101,5 +101,7 @@
     <fx:include fx:id="vistaCitas" source="citas.fxml" translateY="-2000" />
 
     <fx:include fx:id="vistaLogin" source="login.fxml" translateX="0" />
+
+    <fx:include fx:id="vistaSistema" source="sistemaUsuario.fxml" translateX="-2000"/>
 
 </AnchorPane>

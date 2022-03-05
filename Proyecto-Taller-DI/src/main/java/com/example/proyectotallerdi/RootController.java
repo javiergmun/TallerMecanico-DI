@@ -42,6 +42,9 @@ public class RootController {
     private AnchorPane vistaCitas;
 
     @FXML
+    private AnchorPane vistaSistema;
+
+    @FXML
     private VBox vBox;
     @FXML
     private FontIcon menu;
@@ -160,10 +163,8 @@ public class RootController {
         menu.setTranslateX(0);
         menu.setIconLiteral("fas-bars");
         vBox.setTranslateX(-150);
-        vistaLogin.setTranslateY(1500);
         vistaServicio.setTranslateX(0);
         vistaServicio.setTranslateZ(20);
-
     }
 
     @FXML
@@ -171,8 +172,15 @@ public class RootController {
         menu.setTranslateX(0);
         menu.setIconLiteral("fas-bars");
         vBox.setTranslateX(-150);
-        vistaLogin.setTranslateY(1500);
         vistaCitas.setTranslateY(0);
+    }
+
+    @FXML
+    public void iniciarVistaSistema() {
+        menu.setTranslateX(0);
+        menu.setIconLiteral("fas-bars");
+        vistaSistema.setTranslateX(0);
+
     }
 
     @FXML
