@@ -28,6 +28,9 @@ public class ServicioController {
     private AnchorPane servicios;
 
     @FXML
+    private AnchorPane insertarServicio;
+
+    @FXML
     private ListView<Servicio> listaServicios;
 
     @FXML
@@ -113,6 +116,14 @@ public class ServicioController {
         }
     }
 
+    @FXML
+    public void insertServ(){
+        insertarServicio.setTranslateX(0);
+    }
+    @FXML
+    public void back() {
+        insertarServicio.setTranslateX(+1000);
+    }
     @FXML
     public void volver() {
         servicios.setTranslateX(-2000);

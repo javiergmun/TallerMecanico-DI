@@ -2,30 +2,54 @@
 
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 <?import org.kordamp.ikonli.javafx.FontIcon?>
 
-<AnchorPane fx:id="servicios" prefHeight="500.0" prefWidth="700.0" stylesheets="@css/servicio.css" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.proyectotallerdi.ServicioController">
-    <children>
-        <ListView fx:id="listaServicios" layoutX="58.0" prefHeight="500.0" prefWidth="230.0" />
-        <FontIcon fx:id="volver" iconLiteral="fas-arrow-circle-left" iconSize="30" layoutX="14.0" layoutY="261.0" onMouseClicked="#volver" />
-        <AnchorPane layoutX="288.0" prefHeight="500.0" prefWidth="412.0">
-            <children>
-                <ImageView fx:id="imagenServicio" fitHeight="132.0" fitWidth="182.0" layoutX="130.0" layoutY="62.0" pickOnBounds="true" preserveRatio="true" />
-                <Text fx:id="nombre" layoutX="171.0" layoutY="254.0" />
-                <Text fx:id="descripcion" layoutX="155.0" layoutY="290.0" strokeType="OUTSIDE" strokeWidth="0.0" text="%descripcion_larga" />
-                <Text fx:id="precio" layoutX="184.0" layoutY="441.0" strokeType="OUTSIDE" strokeWidth="0.0" />
-                <Button layoutX="342.0" layoutY="461.0" mnemonicParsing="false" onAction="#quitarServicio" text="%borrar" />
-                <ImageView fitHeight="41.0" fitWidth="51.0" layoutX="370.0" pickOnBounds="true" preserveRatio="true">
-                    <image>
-                        <Image url="@images/logo.png" />
-                    </image>
-                </ImageView>
+<AnchorPane fx:id="servicios" prefHeight="500.0" prefWidth="700.0" stylesheets="@css/servicio.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.proyectotallerdi.ServicioController">
+
+    <ListView fx:id="listaServicios" layoutX="58.0" prefHeight="500.0" prefWidth="230.0" />
+    <FontIcon fx:id="volver" iconLiteral="fas-arrow-circle-left" iconSize="30" layoutX="14.0" layoutY="261.0" onMouseClicked="#volver" />
+    <AnchorPane layoutX="288.0" prefHeight="500.0" prefWidth="412.0">
+        <children>
+            <ImageView fx:id="imagenServicio" fitHeight="132.0" fitWidth="182.0" layoutX="130.0" layoutY="62.0" pickOnBounds="true" preserveRatio="true" />
+            <Text fx:id="nombre" layoutX="171.0" layoutY="254.0" />
+            <Text fx:id="descripcion" layoutX="155.0" layoutY="290.0" strokeType="OUTSIDE" strokeWidth="0.0" text="%descripcion_larga" />
+            <Text fx:id="precio" layoutX="184.0" layoutY="441.0" strokeType="OUTSIDE" strokeWidth="0.0" />
+            <Button layoutX="342.0" layoutY="461.0" mnemonicParsing="false" onAction="#quitarServicio" text="%borrar" />
+            <Button layoutX="200.0" layoutY="461.0" mnemonicParsing="false" onAction="#insertServ" text="Insertar Servicio" />
+            <ImageView fitHeight="41.0" fitWidth="51.0" layoutX="370.0" pickOnBounds="true" preserveRatio="true">
+                <image>
+                    <Image url="@images/logo.png" />
+                </image>
+            </ImageView>
             <Text layoutX="123.0" layoutY="441.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Precio-&gt;" />
-            </children>
-        </AnchorPane>
-    </children>
+        </children>
+    </AnchorPane>
+   <AnchorPane fx:id="insertarServicio" prefHeight="500.0" prefWidth="700.0" translateX="1000" style="-fx-background-color: #8383d2;">
+      <children>
+         <TextField layoutX="127.0" layoutY="184.0" />
+         <Text layoutX="248.0" layoutY="97.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Insertar Servicio">
+            <font>
+               <Font name="Elephant" size="24.0" />
+            </font>
+         </Text>
+         <Text layoutX="180.0" layoutY="180.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nombre" />
+         <TextArea layoutX="112.0" layoutY="243.0" prefHeight="200.0" prefWidth="200.0" />
+         <Text layoutX="171.0" layoutY="238.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Descripcion" />
+         <Text layoutX="488.0" layoutY="180.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Precio" />
+         <TextField layoutX="430.0" layoutY="184.0" />
+         <TextField layoutX="430.0" layoutY="243.0" />
+         <Text layoutX="459.0" layoutY="238.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tiempo (Minutos)" />
+         <Button layoutX="467.0" layoutY="443.0" mnemonicParsing="false" text="Cargar Foto" />
+         <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="406.0" layoutY="279.0" pickOnBounds="true" preserveRatio="true" />
+          <FontIcon fx:id="back" iconLiteral="fas-arrow-circle-left" iconSize="30" layoutX="14.0" layoutY="261.0" onMouseClicked="#back" />
+      </children>
+   </AnchorPane>
+
 </AnchorPane>

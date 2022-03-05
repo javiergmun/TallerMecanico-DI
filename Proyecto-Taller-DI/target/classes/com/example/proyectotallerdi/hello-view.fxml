@@ -49,7 +49,7 @@
                 <FontIcon iconLiteral="far-comment" iconSize="10" />
             </graphic>
         </Button>
-        
+
         <Button fx:id="usuarioBBD" text="Usuarios Sistema" onAction="#iniciarVistaSistema">
             <VBox.margin>
                 <Insets top="20" />

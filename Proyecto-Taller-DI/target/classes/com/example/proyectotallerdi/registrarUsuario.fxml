@@ -7,7 +7,7 @@
 <?import javafx.scene.text.Text?>
 <?import org.kordamp.ikonli.javafx.FontIcon?>
 
-<AnchorPane fx:id="vistaRegistroUsuario" prefHeight="500.0" prefWidth="700.0" stylesheets="@css/registrarUsuario.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.proyectotallerdi.RegistrarUsuarioController">
+<AnchorPane fx:id="vistaRegistroUsuario" prefHeight="500.0" prefWidth="700.0" stylesheets="@css/registrarUsuario.css" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.proyectotallerdi.RegistrarUsuarioController">
     <children>
         <FontIcon iconLiteral="fas-user" iconSize="50" layoutX="200.0" layoutY="155.0" />
 
