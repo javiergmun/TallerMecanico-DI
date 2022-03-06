@@ -6,26 +6,39 @@
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
+<?import org.kordamp.ikonli.javafx.FontIcon?>
 
-<AnchorPane fx:id="login" prefHeight="500.0" prefWidth="700.0" stylesheets="@css/login.css"
-            xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1"
-            fx:controller="com.example.proyectotallerdi.LoginController">
+<AnchorPane fx:id="login" prefHeight="500.0" prefWidth="700.0" stylesheets="@css/login.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.proyectotallerdi.LoginController">
 
     <children>
-        <TextField fx:id="usuario" layoutX="276.0" layoutY="250.0"/>
-        <PasswordField fx:id="contraseña" layoutX="276.0" layoutY="304.0"/>
-        <Text layoutX="321.0" layoutY="300.0" strokeType="OUTSIDE" strokeWidth="0.0" text="%contraseña"/>
+
+        <TextField fx:id="usuario" layoutX="276.0" layoutY="250.0" />
+        <PasswordField fx:id="contraseña" layoutX="276.0" layoutY="304.0" />
+        <Text layoutX="321.0" layoutY="300.0" strokeType="OUTSIDE" strokeWidth="0.0" text="%contraseña" />
         <ImageView fx:id="imagen" fitHeight="120" fitWidth="120" layoutX="290.0" layoutY="91.0">
             <image>
-                <Image url="@images/logo.png"/>
+                <Image url="@images/logo.png" />
             </image>
         </ImageView>
-        <Text layoutX="330.0" layoutY="242.0" strokeType="OUTSIDE" strokeWidth="0.0" text="%usuario"/>
-        <Button fx:id="insertar" layoutX="295.0" layoutY="341.0" onAction="#sinRellenar" text="%insertar"/>
-        <Button fx:id="borrar" layoutX="365.0" layoutY="341.0" onAction="#borrarCampos" text="%borrar"/>
-        <Text fx:id="rellenar" layoutX="260.0" layoutY="400.0" strokeType="OUTSIDE" strokeWidth="0.0"
-              text="%rellenar" visible="false"/>
+        <Text layoutX="330.0" layoutY="242.0" strokeType="OUTSIDE" strokeWidth="0.0" text="%usuario" />
+        <Button fx:id="insertar" layoutX="295.0" layoutY="341.0" onAction="#sinRellenar" text="%insertar" />
+        <Button fx:id="borrar" layoutX="365.0" layoutY="341.0" onAction="#borrarCampos" text="%borrar" />
+        <Text fx:id="rellenar" layoutX="260.0" layoutY="400.0" strokeType="OUTSIDE" strokeWidth="0.0" text="%rellenar" visible="false" />
+        <FontIcon iconColor="#901515" iconLiteral="fas-tools" iconSize="150" layoutX="504.0" layoutY="318.0" />
+        <ImageView fitHeight="150.0" fitWidth="229.0" layoutX="14.0" layoutY="79.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@images/tallerLogin.png" />
+            </image>
+        </ImageView>
+
+        <FontIcon iconLiteral="fas-user-times" iconSize="20" layoutX="648.0" layoutY="32.0" />
+      <Text layoutX="59.0" layoutY="269.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Taller 2ºDAM Proyecto Final Desarrollo Interfaces Equipo Trabajo : Daniel Castellote Mario Gonzalez   Javier Gonzalez Andrea Gomez  Adrian Lozano" textAlignment="CENTER" wrappingWidth="140.0">
+         <font>
+            <Font name="Arial" size="14.0" />
+         </font>
+      </Text>
 
     </children>
 

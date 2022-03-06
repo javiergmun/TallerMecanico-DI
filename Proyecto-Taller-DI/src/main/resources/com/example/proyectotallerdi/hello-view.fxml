@@ -13,7 +13,7 @@
 <AnchorPane fx:id="root" prefHeight="500.0" prefWidth="700.0" stylesheets="@css/taller.css" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.proyectotallerdi.RootController">
 
     <FontIcon fx:id="menu" iconColor="#545454" iconLiteral="fas-bars" iconSize="40" layoutX="10" layoutY="40" onMouseClicked="#iniciarVbox" />
-
+    <FontIcon iconLiteral="fas-user-check" iconSize="20" layoutY="32" layoutX="648" />
     <FontIcon iconLiteral="fab-whmcs" iconSize="40" layoutY="80" layoutX="200"/>
     <VBox fx:id="vBox" prefHeight="-Infinity" translateX="-150">
 

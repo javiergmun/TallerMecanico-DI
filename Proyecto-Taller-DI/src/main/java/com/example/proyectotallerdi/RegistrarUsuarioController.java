@@ -1,6 +1,5 @@
 package com.example.proyectotallerdi;
 
-import com.example.proyectotallerdi.entity.Cita;
 import com.example.proyectotallerdi.entity.Usuario;
 import com.example.proyectotallerdi.rest.APIRestConfig;
 import com.example.proyectotallerdi.rest.AccesoDatosRest;
@@ -14,7 +13,6 @@ import org.kordamp.ikonli.javafx.FontIcon;
 import retrofit2.Response;
 
 import java.io.IOException;
-import java.util.List;
 
 public class RegistrarUsuarioController {
     private AccesoDatosRest restService = APIRestConfig.getService();
@@ -41,7 +39,7 @@ public class RegistrarUsuarioController {
 
         Usuario usuario = Usuario.builder()
                 .dni(dniField.getText())
-                .nombre(nombreField.getText())
+                .username(nombreField.getText())
                 .correo(emailField.getText())
                 .telefono(telefonoField.getText())
                 .direccion(direccionField.getText())

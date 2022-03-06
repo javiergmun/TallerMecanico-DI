@@ -59,7 +59,19 @@ public interface AccesoDatosRest {
     @GET("cita/{id}")
     Call<Cita> citasGetById(@Path("id") String id);
 
+    @POST("cita")
+    Call<Cita> citaCreate(@Body Cita cita);
+
     @DELETE("cita/{id}")
     Call<Cita> citasDelete(@Path("id") String id);
+
+    //Mecanico
+
+    @GET("mecanicos")
+    Call<List<Mecanico>> mecanicosGetAll();
+
+    //Vehiculos
+    @GET("vehiculos")
+    Call<List<Vehiculo>> vehiculosGetAll();
 
 }

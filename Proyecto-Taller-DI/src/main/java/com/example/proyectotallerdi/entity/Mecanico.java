@@ -25,10 +25,6 @@ public class Mecanico {
 
     @Override
     public String toString() {
-        return "Mecanico{" +
-                "id=" + id +
-                ", nombre='" + nombre + '\'' +
-                ", salario=" + salario +
-                '}';
+        return nombre;
     }
 }

@@ -33,6 +33,6 @@ public class Cita {
 
     @Override
     public String toString() {
-        return fecha.substring(0,10)+" "+usuario.getNombre() ;
+        return fecha.substring(0,10)+" "+usuario.getUsername() ;
     }
 }

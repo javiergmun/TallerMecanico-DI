@@ -43,7 +43,7 @@ public class SistemaUsuarioController {
 
         usuarios.setEditable(true);
 
-        nombre.setCellValueFactory(new PropertyValueFactory<>("Nombre"));
+        nombre.setCellValueFactory(new PropertyValueFactory<>("Username"));
         dni.setCellValueFactory(new PropertyValueFactory<>("Dni"));
         telefono.setCellValueFactory(new PropertyValueFactory<>("Telefono"));
 
@@ -52,12 +52,11 @@ public class SistemaUsuarioController {
         );
         usuarios.setItems(tabla);
 
-
         ObservableList<PieChart.Data> datosGraficoCircular = FXCollections.observableArrayList(
-                new PieChart.Data("Citroen",5),
-                new PieChart.Data("Ford",3),
-                new PieChart.Data("Seat",9),
-                new PieChart.Data("Porsche",1)
+                new PieChart.Data("Audi",3),
+                new PieChart.Data("Mercedes",2),
+                new PieChart.Data("BMV",1),
+                new PieChart.Data("Citroen",1)
         );
         grafico.setData(datosGraficoCircular);
         grafico.setClockwise(false);

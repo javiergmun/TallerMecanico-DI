@@ -14,18 +14,25 @@ public class Usuario {
 
     private long id;
     private String dni;
-    private String nombre;
+    private String username;
     //private Boolean administrador;
     private String telefono;
     //private Direccion direccion;
     private String correo;
     private String password;
-   // private Set<Vehiculo> vehiculos;
+    private Set<Vehiculo> vehiculos;
    // private Login login;
     private String direccion;
 
 
 
+    public Set<Vehiculo> getVehiculos() {
+        return vehiculos;
+    }
+
+    public void setVehiculos(Set<Vehiculo> vehiculos) {
+        this.vehiculos = vehiculos;
+    }
     public String getDireccion() {
         return direccion;}
     public void setDireccion(String direccion) {
@@ -37,8 +44,8 @@ public class Usuario {
     public String getDni() {return dni;}
     public void setDni(String dni) {this.dni = dni;}
 
-    public String getNombre() {return nombre;}
-    public void setNombre(String nombre) {this.nombre = nombre;}
+    public String getUsername() {return username;}
+    public void setUsername(String username) {this.username = username;}
 
 
     public String getTelefono() {return telefono;}
@@ -55,6 +62,6 @@ public class Usuario {
 
     @Override
     public String toString() {
-        return nombre;
+        return username;
     }
 }

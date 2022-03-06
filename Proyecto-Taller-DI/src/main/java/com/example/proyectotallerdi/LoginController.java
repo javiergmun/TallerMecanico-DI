@@ -39,7 +39,8 @@ public class LoginController {
             alert.setContentText("No has rellenado todos los campos");
             alert.showAndWait();
             rellenar.setVisible(true);
-        } else
+        }else
             login.setTranslateY(2000);
+
     }
 }

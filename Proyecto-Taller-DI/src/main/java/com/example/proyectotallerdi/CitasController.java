@@ -1,6 +1,7 @@
 package com.example.proyectotallerdi;
 
 import com.example.proyectotallerdi.entity.Cita;
+import com.example.proyectotallerdi.entity.Mecanico;
 import com.example.proyectotallerdi.entity.Servicio;
 import com.example.proyectotallerdi.entity.Usuario;
 import com.example.proyectotallerdi.rest.APIRestConfig;
@@ -8,11 +9,22 @@ import com.example.proyectotallerdi.rest.AccesoDatosRest;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
+import javafx.geometry.Point2D;
+import javafx.scene.control.Alert;
 import javafx.scene.control.ComboBox;
+import javafx.scene.control.DateCell;
+import javafx.scene.control.DatePicker;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.Background;
+import javafx.scene.layout.BackgroundFill;
+import javafx.scene.paint.Color;
+import javafx.scene.paint.Paint;
+import javafx.util.Callback;
 import retrofit2.Response;
 
 import java.io.IOException;
+import java.time.DayOfWeek;
+import java.time.LocalDate;
 import java.util.List;
 
 public class CitasController {
@@ -25,6 +37,11 @@ public class CitasController {
     private ComboBox<Usuario> usuarios;
     @FXML
     private ComboBox<Servicio> servicios;
+    @FXML
+    private ComboBox<Mecanico> mecanico;
+
+    @FXML
+    private DatePicker pickerDay;
 
 
     @FXML
@@ -39,7 +56,68 @@ public class CitasController {
                 cargarServicios()
         );
         servicios.setItems(comboServicios);
+        ObservableList<Mecanico> comboMecanico = FXCollections.observableArrayList(
+                cargarMecanicos()
+        );
+        mecanico.setItems(comboMecanico);
 
+        pickerDay.setShowWeekNumbers(true);
+        Callback<DatePicker, DateCell> dayCellFactory = dp -> new DateCell() {
+            @Override
+            public void updateItem(LocalDate item, boolean empty) {
+                super.updateItem(item, empty);
+                this.setDisable(false);
+                this.setBackground(null);
+                this.setTextFill(Color.BLACK);
+                // fines de semana en color rojo y deshabilitados
+                DayOfWeek dayweek = item.getDayOfWeek();
+                if (dayweek == DayOfWeek.SATURDAY || dayweek == DayOfWeek.SUNDAY) {
+                    this.setDisabled(true);
+                    this.setTextFill(Color.RED);
+                }
+            }
+        };
+        pickerDay.setDayCellFactory(dayCellFactory);
+
+    }
+
+    public Cita citaBuilder(){
+
+        Cita cita = Cita.builder()
+                .usuario(usuarios.getValue())
+                .mecanico(mecanico.getValue())
+                .servicio(servicios.getValue())
+                .fecha(pickerDay.getValue().toString())
+                .build();
+
+        return cita;
+    }
+    @FXML
+    public void insertarCita(){
+        if (usuarios.getValue()==null || mecanico.getValue()==null || servicios.getValue() == null) {
+            Alert alert = new Alert(Alert.AlertType.WARNING);
+            alert.setHeaderText(null);
+            alert.setTitle("Cuidado");
+            alert.setContentText("No has rellenado todos los campos");
+            alert.showAndWait();
+        } else
+            postCita();
+
+    }
+
+    //Cita Post
+    private Cita postCita() {
+        try {
+            Response<Cita> response = restService.citaCreate(citaBuilder()).execute();
+            if (response.isSuccessful() && response.body() != null) {
+                return response.body();
+            } else {
+                System.out.println("Error: " + response.code());
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return null;
     }
 
     //Usuarios
@@ -104,6 +182,30 @@ public class CitasController {
         try {
 
             Response<List<Cita>> response = restService.citasGetAll().execute();
+            if (response.isSuccessful() && response.body() != null) {
+                return response.body();
+            } else {
+                System.out.println("Error: " + response.code());
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
+    //Mecanico
+    private ObservableList<Mecanico> cargarMecanicos() {
+        List<Mecanico> noObservable = getMecanicos();
+        if (noObservable != null) {
+            return FXCollections.observableArrayList(noObservable);
+        } else {
+            return null;
+        }
+    }
+
+    private List<Mecanico> getMecanicos() {
+        try {
+
+            Response<List<Mecanico>> response = restService.mecanicosGetAll().execute();
             if (response.isSuccessful() && response.body() != null) {
                 return response.body();
             } else {

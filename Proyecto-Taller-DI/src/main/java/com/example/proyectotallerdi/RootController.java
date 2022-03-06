@@ -14,7 +14,6 @@ import javafx.scene.effect.DropShadow;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.VBox;
 import javafx.util.Duration;
-import org.kordamp.ikonli.Ikonli;
 import org.kordamp.ikonli.javafx.FontIcon;
 import retrofit2.Response;
 
@@ -85,14 +84,14 @@ public class RootController {
         citasHoy.getSelectionModel().selectedItemProperty().addListener((observable, oldValue, newValue) -> {
             if (newValue != null){
                 textHora.setText(newValue.getFecha().substring(11,16));
-                textUsuario.setText(newValue.getUsuario().getNombre());
+                textUsuario.setText(newValue.getUsuario().getUsername());
                 textServicio.setText(newValue.getServicio().getTipo());
                 textPrecio.setText(String.valueOf(newValue.getServicio().getPrecio()));
                 textMecanico.setText(newValue.getMecanico().getNombre());
-                textMarca.setText("");
-                textModelo.setText("");
-            }
+                textMarca.setText(newValue.getUsuario().getVehiculos().stream().findFirst().get().getMarca());
+                textModelo.setText(newValue.getUsuario().getVehiculos().stream().findFirst().get().getModelo());
 
+            }
         });
     }
     private ObservableList<Cita> cargarCitas() {

@@ -17,10 +17,10 @@
     <FontIcon fx:id="volver" iconLiteral="fas-arrow-circle-left" iconSize="30" layoutX="14.0" layoutY="261.0" onMouseClicked="#volver" />
     <AnchorPane layoutX="288.0" prefHeight="500.0" prefWidth="412.0">
         <children>
-            <ImageView fx:id="imagenServicio" fitHeight="132.0" fitWidth="182.0" layoutX="130.0" layoutY="62.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="imagenServicio" fitHeight="161.0" fitWidth="230.0" layoutX="91.0" layoutY="62.0" pickOnBounds="true" preserveRatio="true" />
             <Text fx:id="nombre" layoutX="171.0" layoutY="254.0" />
-            <Text fx:id="descripcion" layoutX="155.0" layoutY="290.0" strokeType="OUTSIDE" strokeWidth="0.0" text="%descripcion_larga" />
-            <Text fx:id="precio" layoutX="184.0" layoutY="441.0" strokeType="OUTSIDE" strokeWidth="0.0" />
+            <Text fx:id="descripcion" layoutX="91.0" layoutY="290.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="230.0" />
+            <Text fx:id="precio" layoutX="184.0" layoutY="420.0" strokeType="OUTSIDE" strokeWidth="0.0" />
             <Button layoutX="342.0" layoutY="461.0" mnemonicParsing="false" onAction="#quitarServicio" text="%borrar" />
             <Button layoutX="200.0" layoutY="461.0" mnemonicParsing="false" onAction="#insertServ" text="Insertar Servicio" />
             <ImageView fitHeight="41.0" fitWidth="51.0" layoutX="370.0" pickOnBounds="true" preserveRatio="true">
@@ -28,11 +28,12 @@
                     <Image url="@images/logo.png" />
                 </image>
             </ImageView>
-            <Text layoutX="123.0" layoutY="441.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Precio-&gt;" />
+            <Text layoutX="123.0" layoutY="420.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Precio-&gt;" />
+         <FontIcon iconLiteral="fas-euro-sign" layoutX="220.0" layoutY="425.0" />
         </children>
     </AnchorPane>
 
-   <AnchorPane fx:id="insertarServicio" prefHeight="500.0" prefWidth="700.0" translateX="1000" style="-fx-background-color: #8383d2;">
+   <AnchorPane fx:id="insertarServicio" prefHeight="500.0" prefWidth="700.0" translateX="1000">
       <children>
 
          <Text layoutX="248.0" layoutY="97.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Insertar Servicio">
@@ -48,10 +49,13 @@
          <TextField fx:id="insertPrecio" layoutX="430.0" layoutY="184.0" />
          <TextField fx:id="insertTiempo" layoutX="430.0" layoutY="243.0" />
          <Text layoutX="459.0" layoutY="238.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tiempo (Minutos)" />
-         <Button layoutX="467.0" layoutY="443.0" mnemonicParsing="false" text="Cargar Foto" onAction="#cargarFoto"/>
-          <Button layoutX="420" layoutY="443" text="Insertar" onAction="#servicioInsertado"/>
-         <ImageView fx:id="insertFoto" fitHeight="150.0" fitWidth="300.0" layoutX="406.0" layoutY="279.0" pickOnBounds="true" preserveRatio="true" />
+         <Button layoutX="470.0" layoutY="443.0" mnemonicParsing="false" onAction="#cargarFoto" text="Cargar Foto" />
+          <Button layoutX="410" layoutY="443" onAction="#servicioInsertado" text="Insertar" />
+         <ImageView fx:id="insertFoto" fitHeight="150.0" fitWidth="300.0" layoutX="371.0" layoutY="279.0" pickOnBounds="true" preserveRatio="true" />
           <FontIcon fx:id="back" iconLiteral="fas-arrow-circle-left" iconSize="30" layoutX="14.0" layoutY="261.0" onMouseClicked="#back" />
+         <FontIcon iconLiteral="fas-toolbox" iconSize="30" layoutX="187.0" layoutY="150.0" />
+         <FontIcon iconLiteral="fas-euro-sign" iconSize="20" layoutX="591.0" layoutY="204.0" />
+         <FontIcon iconLiteral="fas-clock" iconSize="20" layoutX="587.0" layoutY="263.0" />
       </children>
    </AnchorPane>
 
