@@ -31,23 +31,26 @@
             <Text layoutX="123.0" layoutY="441.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Precio-&gt;" />
         </children>
     </AnchorPane>
+
    <AnchorPane fx:id="insertarServicio" prefHeight="500.0" prefWidth="700.0" translateX="1000" style="-fx-background-color: #8383d2;">
       <children>
-         <TextField layoutX="127.0" layoutY="184.0" />
+
          <Text layoutX="248.0" layoutY="97.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Insertar Servicio">
             <font>
                <Font name="Elephant" size="24.0" />
             </font>
          </Text>
+          <TextField fx:id="insertNombre" layoutX="127.0" layoutY="184.0" />
          <Text layoutX="180.0" layoutY="180.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nombre" />
-         <TextArea layoutX="112.0" layoutY="243.0" prefHeight="200.0" prefWidth="200.0" />
+         <TextArea fx:id="insertDescripcion" layoutX="112.0" layoutY="243.0" prefHeight="200.0" prefWidth="200.0" />
          <Text layoutX="171.0" layoutY="238.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Descripcion" />
          <Text layoutX="488.0" layoutY="180.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Precio" />
-         <TextField layoutX="430.0" layoutY="184.0" />
-         <TextField layoutX="430.0" layoutY="243.0" />
+         <TextField fx:id="insertPrecio" layoutX="430.0" layoutY="184.0" />
+         <TextField fx:id="insertTiempo" layoutX="430.0" layoutY="243.0" />
          <Text layoutX="459.0" layoutY="238.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tiempo (Minutos)" />
-         <Button layoutX="467.0" layoutY="443.0" mnemonicParsing="false" text="Cargar Foto" />
-         <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="406.0" layoutY="279.0" pickOnBounds="true" preserveRatio="true" />
+         <Button layoutX="467.0" layoutY="443.0" mnemonicParsing="false" text="Cargar Foto" onAction="#cargarFoto"/>
+          <Button layoutX="420" layoutY="443" text="Insertar" onAction="#servicioInsertado"/>
+         <ImageView fx:id="insertFoto" fitHeight="150.0" fitWidth="300.0" layoutX="406.0" layoutY="279.0" pickOnBounds="true" preserveRatio="true" />
           <FontIcon fx:id="back" iconLiteral="fas-arrow-circle-left" iconSize="30" layoutX="14.0" layoutY="261.0" onMouseClicked="#back" />
       </children>
    </AnchorPane>

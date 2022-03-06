@@ -44,7 +44,7 @@ public class RegistrarUsuarioController {
                 .nombre(nombreField.getText())
                 .correo(emailField.getText())
                 .telefono(telefonoField.getText())
-                //.direccion.setCalle(direccionField.getText())
+                .direccion(direccionField.getText())
                 .password(contraseñaField.getText())
                 .build();
 

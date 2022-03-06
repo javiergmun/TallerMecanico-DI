@@ -89,8 +89,8 @@ public class RootController {
                 textServicio.setText(newValue.getServicio().getTipo());
                 textPrecio.setText(String.valueOf(newValue.getServicio().getPrecio()));
                 textMecanico.setText(newValue.getMecanico().getNombre());
-                textMarca.setText(newValue.getUsuario().getVehiculos().toString());
-                textModelo.setText(newValue.getUsuario().getVehiculos().toString());
+                textMarca.setText("");
+                textModelo.setText("");
             }
 
         });
