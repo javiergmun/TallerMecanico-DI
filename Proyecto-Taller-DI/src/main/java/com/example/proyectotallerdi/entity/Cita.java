@@ -15,6 +15,7 @@ public class Cita {
     private Usuario usuario;
     private Mecanico mecanico;
     private Servicio servicio;
+    private Vehiculo vehiculo;
 
     public long getId() {return id;}
     public void setId(long id) {this.id = id;}
@@ -30,6 +31,13 @@ public class Cita {
 
     public Servicio getServicio() {return servicio;}
     public void setServicio(Servicio servicio) {this.servicio = servicio;}
+
+    public Vehiculo getVehiculo() {
+        return vehiculo;
+    }
+    public void setVehiculo(Vehiculo vehiculo) {
+        this.vehiculo = vehiculo;
+    }
 
     @Override
     public String toString() {

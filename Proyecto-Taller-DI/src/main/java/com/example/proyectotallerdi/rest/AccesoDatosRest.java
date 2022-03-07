@@ -19,7 +19,7 @@ public interface AccesoDatosRest {
     @GET("usuarios/{id}/vehiculos")
     Call<List<Vehiculo>> usuarioGetVehiculos(@Path("id") String id);
 
-    @POST("usuario")
+    @POST("usuarios")
     Call<Usuario> usuarioCreate(@Body Usuario user);
 
     @POST("login")
@@ -39,16 +39,16 @@ public interface AccesoDatosRest {
     @GET("servicios")
     Call<List<Servicio>> serviciosGetAll();
 
-    @GET("servicio/{id}")
+    @GET("servicios/{id}")
     Call<Servicio> serviciosGetById(@Path("id") String id);
 
-    @POST("servicio")
+    @POST("servicios")
     Call<Servicio> serviciosCreate(@Body Servicio servicio);
 
-    @PUT("servicio/{id}")
+    @PUT("servicios/{id}")
     Call<Servicio> serviciosUpdate(@Path("id") String id, @Body Servicio servicio);
 
-    @DELETE("servicio/{id}")
+    @DELETE("servicios/{id}")
     Call<Servicio> serviciosDelete(@Path("id") Long id);
 
     //CITAS
@@ -56,13 +56,13 @@ public interface AccesoDatosRest {
     @GET("citas")
     Call<List<Cita>> citasGetAll();
 
-    @GET("cita/{id}")
+    @GET("citas/{id}")
     Call<Cita> citasGetById(@Path("id") String id);
 
-    @POST("cita")
+    @POST("citas")
     Call<Cita> citaCreate(@Body Cita cita);
 
-    @DELETE("cita/{id}")
+    @DELETE("citas/{id}")
     Call<Cita> citasDelete(@Path("id") String id);
 
     //Mecanico

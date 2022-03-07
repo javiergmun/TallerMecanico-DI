@@ -89,7 +89,7 @@ public class CitasController {
                 .servicio(servicios.getValue())
                 .fecha(pickerDay.getValue().toString())
                 .build();
-
+        System.out.println(pickerDay.getValue().toString());
         return cita;
     }
     @FXML
