@@ -12,8 +12,8 @@
 <AnchorPane fx:id="citas" prefHeight="500.0" prefWidth="700.0" stylesheets="@css/citas.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.proyectotallerdi.CitasController">
     <children>
         <ListView layoutX="435.0" prefHeight="500.0" prefWidth="266.0" />
-        <ComboBox fx:id="servicios" layoutX="138.0" layoutY="251.0" prefWidth="150.0" />
-        <DatePicker fx:id="pickerDay" layoutX="138.0" layoutY="390.0" />
+        <ComboBox fx:id="servicios" layoutX="139.0" layoutY="239.0" prefWidth="150.0" />
+        <DatePicker fx:id="pickerDay" layoutX="137.0" layoutY="409.0" />
         <Text layoutX="162.0" layoutY="129.0" strokeType="OUTSIDE" strokeWidth="0.0" text="%crear_citas">
             <font>
                 <Font name="Century" size="24.0" />
@@ -21,14 +21,20 @@
         </Text>
         <Text layoutX="324.0" layoutY="242.0" strokeType="OUTSIDE" strokeWidth="0.0" text="%horas_disponibles" />
         <FontIcon iconLiteral="fas-angle-right" iconSize="20" layoutX="360.0" layoutY="269.0" wrappingWidth="6.0" />
-        <Text layoutX="192.0" layoutY="246.0" strokeType="OUTSIDE" strokeWidth="0.0" text="%servicio_citas" />
+        <Text layoutX="187.0" layoutY="234.0" strokeType="OUTSIDE" strokeWidth="0.0" text="%servicio_citas" />
         <ComboBox fx:id="usuarios" layoutX="139.0" layoutY="177.0" prefWidth="150.0" />
         <Text layoutX="190.0" layoutY="173.0" strokeType="OUTSIDE" strokeWidth="0.0" text="%usuario_alta" />
-        <Text layoutX="188.0" layoutY="386.0" strokeType="OUTSIDE" strokeWidth="0.0" text="%dia_disponible" />
-        <Button layoutX="192.0" layoutY="442.0" mnemonicParsing="false" onAction="#insertarCita" text="%insertar" />
+        <Text layoutX="181.0" layoutY="401.0" strokeType="OUTSIDE" strokeWidth="0.0" text="%dia_disponible" />
+        <Button layoutX="333.0" layoutY="396.0" mnemonicParsing="false" onAction="#insertarCita" text="%insertar" />
         <FontIcon iconLiteral="fas-arrow-circle-left" iconSize="35" layoutX="208.0" layoutY="74.0" onMouseClicked="#volver" />
-      <ComboBox fx:id="mecanico" layoutX="139.0" layoutY="315.0" prefWidth="150.0" />
-      <Text layoutX="198.0" layoutY="311.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Mecanico:" />
+      <ComboBox fx:id="mecanico" layoutX="139.0" layoutY="296.0" prefWidth="150.0" />
+      <Text layoutX="187.0" layoutY="292.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Mecanico:" />
       <FontIcon iconLiteral="fas-calendar-day" iconSize="40" layoutX="343.0" layoutY="343.0" />
+      <Text layoutX="189.0" layoutY="341.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Vehiculo:" />
+      <ComboBox fx:id="vehiculo" layoutX="139.0" layoutY="348.0" prefWidth="150.0" />
+      <FontIcon iconLiteral="fas-user" iconSize="20" layoutX="102.0" layoutY="194.0" />
+      <FontIcon iconLiteral="fas-toolbox" iconSize="20" layoutX="102.0" layoutY="257.0" />
+      <FontIcon iconLiteral="fas-user-cog" iconSize="20" layoutX="99.0" layoutY="315.0" />
+      <FontIcon iconLiteral="fas-car" iconSize="20" layoutX="102.0" layoutY="369.0" text="" />
     </children>
 </AnchorPane>

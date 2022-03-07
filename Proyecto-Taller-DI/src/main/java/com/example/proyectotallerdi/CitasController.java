@@ -1,9 +1,6 @@
 package com.example.proyectotallerdi;
 
-import com.example.proyectotallerdi.entity.Cita;
-import com.example.proyectotallerdi.entity.Mecanico;
-import com.example.proyectotallerdi.entity.Servicio;
-import com.example.proyectotallerdi.entity.Usuario;
+import com.example.proyectotallerdi.entity.*;
 import com.example.proyectotallerdi.rest.APIRestConfig;
 import com.example.proyectotallerdi.rest.AccesoDatosRest;
 import javafx.collections.FXCollections;
@@ -39,6 +36,8 @@ public class CitasController {
     private ComboBox<Servicio> servicios;
     @FXML
     private ComboBox<Mecanico> mecanico;
+    @FXML
+    private ComboBox<Vehiculo> vehiculo;
 
     @FXML
     private DatePicker pickerDay;
@@ -60,6 +59,10 @@ public class CitasController {
                 cargarMecanicos()
         );
         mecanico.setItems(comboMecanico);
+        ObservableList<Vehiculo> comboVehiculos= FXCollections.observableArrayList(
+                cargarVehiculo()
+        );
+        vehiculo.setItems(comboVehiculos);
 
         pickerDay.setShowWeekNumbers(true);
         Callback<DatePicker, DateCell> dayCellFactory = dp -> new DateCell() {
@@ -87,6 +90,7 @@ public class CitasController {
                 .usuario(usuarios.getValue())
                 .mecanico(mecanico.getValue())
                 .servicio(servicios.getValue())
+                .vehiculo(vehiculo.getValue())
                 .fecha(pickerDay.getValue().toString())
                 .build();
         System.out.println(pickerDay.getValue().toString());
@@ -206,6 +210,29 @@ public class CitasController {
         try {
 
             Response<List<Mecanico>> response = restService.mecanicosGetAll().execute();
+            if (response.isSuccessful() && response.body() != null) {
+                return response.body();
+            } else {
+                System.out.println("Error: " + response.code());
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
+    //Vehiculos
+    private ObservableList<Vehiculo> cargarVehiculo() {
+        List<Vehiculo> noObservable = getVehiculo();
+        if (noObservable != null) {
+            return FXCollections.observableArrayList(noObservable);
+        } else {
+            return null;
+        }
+    }
+
+    private List<Vehiculo> getVehiculo() {
+        try {
+            Response<List<Vehiculo>> response = restService.vehiculosGetAll().execute();
             if (response.isSuccessful() && response.body() != null) {
                 return response.body();
             } else {

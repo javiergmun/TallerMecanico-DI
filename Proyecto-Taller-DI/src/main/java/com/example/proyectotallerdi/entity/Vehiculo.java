@@ -22,6 +22,7 @@ public class Vehiculo {
     public long getId() {
         return id;
     }
+
     public void setId(long id) {
         this.id = id;
     }
@@ -29,6 +30,7 @@ public class Vehiculo {
     public String getMarca() {
         return marca;
     }
+
     public void setMarca(String marca) {
         this.marca = marca;
     }
@@ -36,6 +38,7 @@ public class Vehiculo {
     public String getModelo() {
         return modelo;
     }
+
     public void setModelo(String modelo) {
         this.modelo = modelo;
     }
@@ -43,6 +46,7 @@ public class Vehiculo {
     public String getMatricula() {
         return matricula;
     }
+
     public void setMatricula(String matricula) {
         this.matricula = matricula;
     }
@@ -50,21 +54,21 @@ public class Vehiculo {
     public String getColor() {
         return color;
     }
+
     public void setColor(String color) {
         this.color = color;
     }
 
-    public String getImagen() {return imagen;}
-    public void setImagen(String imagen) {this.imagen = imagen;}
+    public String getImagen() {
+        return imagen;
+    }
+
+    public void setImagen(String imagen) {
+        this.imagen = imagen;
+    }
 
     @Override
     public String toString() {
-        return "Vehiculo{" +
-                "id=" + id +
-                ", marca='" + marca + '\'' +
-                ", modelo='" + modelo + '\'' +
-                ", matricula='" + matricula + '\'' +
-                ", color='" + color + '\'' +
-                '}';
+        return marca + " " + modelo;
     }
 }

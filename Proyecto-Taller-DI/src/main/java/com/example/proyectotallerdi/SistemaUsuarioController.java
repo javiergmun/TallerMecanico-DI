@@ -30,14 +30,14 @@ public class SistemaUsuarioController {
     private TableView usuarios;
 
     @FXML
-    private TableColumn<?,?> nombre;
+    private TableColumn<?, ?> nombre;
     @FXML
-    private TableColumn<?,?> dni;
+    private TableColumn<?, ?> dni;
     @FXML
-    private TableColumn<?,?> telefono;
+    private TableColumn<?, ?> telefono;
 
     @FXML
-    public void initialize(){
+    public void initialize() {
 
         ObservableList<Usuario> tabla;
 
@@ -52,11 +52,42 @@ public class SistemaUsuarioController {
         );
         usuarios.setItems(tabla);
 
+        ObservableList<Vehiculo> vehiculos = cargarVehiculo();
+
+        int contadorAudi = 0;
+        for (Vehiculo e : vehiculos) {
+            if (e.getMarca().equals("Audi")) {
+
+                contadorAudi++;
+            }
+        }
+        int contadorMercedes = 0;
+        for (Vehiculo e : vehiculos) {
+            if (e.getMarca().equals("Mercedes")) {
+
+                contadorMercedes++;
+            }
+        }
+        int contadorBMV = 0;
+        for (Vehiculo e : vehiculos) {
+            if (e.getMarca().equals("BMV")) {
+
+                contadorBMV++;
+            }
+        }
+        int contadorCitroen = 0;
+        for (Vehiculo e : vehiculos) {
+            if (e.getMarca().equals("Citroen")) {
+
+                contadorCitroen++;
+            }
+        }
+
         ObservableList<PieChart.Data> datosGraficoCircular = FXCollections.observableArrayList(
-                new PieChart.Data("Audi",3),
-                new PieChart.Data("Mercedes",2),
-                new PieChart.Data("BMV",1),
-                new PieChart.Data("Citroen",1)
+                new PieChart.Data("Audi", contadorAudi),
+                new PieChart.Data("Mercedes", contadorMercedes),
+                new PieChart.Data("BMV", contadorBMV),
+                new PieChart.Data("Citroen", contadorCitroen)
         );
         grafico.setData(datosGraficoCircular);
         grafico.setClockwise(false);
@@ -73,9 +104,35 @@ public class SistemaUsuarioController {
             return null;
         }
     }
+
     private List<Usuario> getUsuarios() {
         try {
             Response<List<Usuario>> response = restService.usuarioGetAll().execute();
+            if (response.isSuccessful() && response.body() != null) {
+                return response.body();
+            } else {
+                System.out.println("Error: " + response.code());
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
+
+
+    //Vehiculos
+    private ObservableList<Vehiculo> cargarVehiculo() {
+        List<Vehiculo> noObservable = getVehiculo();
+        if (noObservable != null) {
+            return FXCollections.observableArrayList(noObservable);
+        } else {
+            return null;
+        }
+    }
+
+    private List<Vehiculo> getVehiculo() {
+        try {
+            Response<List<Vehiculo>> response = restService.vehiculosGetAll().execute();
             if (response.isSuccessful() && response.body() != null) {
                 return response.body();
             } else {
