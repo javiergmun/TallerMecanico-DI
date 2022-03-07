@@ -39,8 +39,17 @@ public class LoginController {
             alert.setContentText("No has rellenado todos los campos");
             alert.showAndWait();
             rellenar.setVisible(true);
-        }else
+        }
+        if (usuario.getText().equals("Jose") && contraseña.getText().equals("1234")) {
             login.setTranslateY(2000);
+        }else {
+            Alert alert = new Alert(Alert.AlertType.WARNING);
+            alert.setHeaderText(null);
+            alert.setTitle("Cuidado");
+            alert.setContentText("No eres un administrador");
+            alert.showAndWait();
+        }
+
 
     }
 }
