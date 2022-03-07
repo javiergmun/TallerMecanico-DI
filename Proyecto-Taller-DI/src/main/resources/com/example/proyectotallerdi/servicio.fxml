@@ -11,7 +11,7 @@
 <?import javafx.scene.text.Text?>
 <?import org.kordamp.ikonli.javafx.FontIcon?>
 
-<AnchorPane fx:id="servicios" prefHeight="500.0" prefWidth="700.0" stylesheets="@css/servicio.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.proyectotallerdi.ServicioController">
+<AnchorPane fx:id="servicios" prefHeight="500.0" prefWidth="700.0" stylesheets="@css/servicio.css" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.proyectotallerdi.ServicioController">
 
     <ListView fx:id="listaServicios" layoutX="58.0" prefHeight="500.0" prefWidth="230.0" />
     <FontIcon fx:id="volver" iconLiteral="fas-arrow-circle-left" iconSize="30" layoutX="14.0" layoutY="261.0" onMouseClicked="#volver" />

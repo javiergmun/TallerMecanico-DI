@@ -9,6 +9,7 @@
 }
 #vBox {
     -fx-background-color: #BC070E;
+    -fx-effect: DropShadow;
 }
 
 #labelMenu {

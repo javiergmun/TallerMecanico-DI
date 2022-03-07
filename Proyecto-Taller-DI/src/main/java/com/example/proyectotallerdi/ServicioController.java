@@ -1,8 +1,6 @@
 package com.example.proyectotallerdi;
 
-import com.example.proyectotallerdi.entity.Cita;
 import com.example.proyectotallerdi.entity.Servicio;
-import com.example.proyectotallerdi.entity.Usuario;
 import com.example.proyectotallerdi.rest.APIRestConfig;
 import com.example.proyectotallerdi.rest.AccesoDatosRest;
 import javafx.collections.FXCollections;

@@ -1,6 +1,7 @@
 package com.example.proyectotallerdi;
 
 import com.example.proyectotallerdi.entity.Cita;
+import com.example.proyectotallerdi.entity.Servicio;
 import com.example.proyectotallerdi.rest.APIRestConfig;
 import com.example.proyectotallerdi.rest.AccesoDatosRest;
 import javafx.animation.Animation;
@@ -74,6 +75,9 @@ public class RootController {
     private TextField textMecanico;
 
     @FXML
+    private Button borrarCita;
+
+    @FXML
     public void initialize(){
 
         ObservableList<Cita> citas = FXCollections.observableArrayList(
@@ -117,7 +121,36 @@ public class RootController {
         return null;
     }
 
+    //Delete cita
+    private Cita deleteCita(Long id) {
+        try {
+            Response<Cita> response = restService.citasDelete(id).execute();
+            if (response.isSuccessful() && response.body() != null) {
+                return response.body();
+            } else {
+                System.out.println("Error: " + response.code());
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
 
+    @FXML
+    public void quitarCita() throws IOException {
+        Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+        alert.setHeaderText(null);
+        alert.setTitle("Borrar Elemento");
+        alert.setContentText("¿Estas seguro de que quieres borrar el elemento?");
+        Optional<ButtonType> action = alert.showAndWait();
+        if (action.get() == ButtonType.OK) {
+            int indice= citasHoy.getSelectionModel().getSelectedIndex();
+            citasHoy.getItems().remove(indice);
+            deleteCita(Long.valueOf(indice));
+        } else {
+
+        }
+    }
 
     @FXML
     public void iniciarVbox() {

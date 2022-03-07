@@ -93,6 +93,7 @@
     <TextField fx:id="textModelo" layoutX="480" layoutY="460" />
     <TextField fx:id="textMecanico" layoutX="480" layoutY="330" />
 
+    <Button fx:id="borrarCita" layoutX="220" layoutY="470" onAction="#quitarCita" text="%borrar"/>
 
     <fx:include fx:id="vistaRegistro" source="registrarUsuario.fxml" translateX="2000" />
 

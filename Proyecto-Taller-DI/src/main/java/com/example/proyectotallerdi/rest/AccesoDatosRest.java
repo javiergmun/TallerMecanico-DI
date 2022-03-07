@@ -63,7 +63,7 @@ public interface AccesoDatosRest {
     Call<Cita> citaCreate(@Body Cita cita);
 
     @DELETE("citas/{id}")
-    Call<Cita> citasDelete(@Path("id") String id);
+    Call<Cita> citasDelete(@Path("id") Long id);
 
     //Mecanico
 
