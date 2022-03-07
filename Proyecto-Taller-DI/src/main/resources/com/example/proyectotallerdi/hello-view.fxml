@@ -50,7 +50,7 @@
             </graphic>
         </Button>
 
-        <Button fx:id="usuarioBBD" text="Usuarios Sistema" onAction="#iniciarVistaSistema">
+        <Button fx:id="usuarioBBD" text="%usuarioSistema" onAction="#iniciarVistaSistema">
             <VBox.margin>
                 <Insets top="20" />
             </VBox.margin>

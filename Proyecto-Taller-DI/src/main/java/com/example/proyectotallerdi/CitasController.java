@@ -5,12 +5,11 @@ import com.example.proyectotallerdi.rest.APIRestConfig;
 import com.example.proyectotallerdi.rest.AccesoDatosRest;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.geometry.Point2D;
-import javafx.scene.control.Alert;
-import javafx.scene.control.ComboBox;
-import javafx.scene.control.DateCell;
-import javafx.scene.control.DatePicker;
+import javafx.scene.control.*;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.Background;
 import javafx.scene.layout.BackgroundFill;
@@ -41,6 +40,9 @@ public class CitasController {
 
     @FXML
     private DatePicker pickerDay;
+
+    @FXML
+    private ListView<String> horas;
 
 
     @FXML
@@ -82,18 +84,31 @@ public class CitasController {
         };
         pickerDay.setDayCellFactory(dayCellFactory);
 
+        ObservableList<String> listaHoras = FXCollections.observableArrayList(
+                "9:30","10:00","11:30","12:00","13:00","14:00","16:00","16:30","17:00"
+        );
+
+        pickerDay.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent actionEvent) {
+                horas.setItems(listaHoras);
+            }
+        });
+
     }
 
     public Cita citaBuilder(){
+
 
         Cita cita = Cita.builder()
                 .usuario(usuarios.getValue())
                 .mecanico(mecanico.getValue())
                 .servicio(servicios.getValue())
                 .vehiculo(vehiculo.getValue())
-                .fecha(pickerDay.getValue().toString())
+                .fecha(pickerDay.getValue().toString()+"T"+ horas.getSelectionModel().getSelectedItem())
                 .build();
-        System.out.println(pickerDay.getValue().toString());
+
+       // System.out.println(pickerDay.getValue().toString()+"T"+horas.getSelectionModel().getSelectedItem().toString());
         return cita;
     }
     @FXML

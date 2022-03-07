@@ -22,35 +22,35 @@
             <Text fx:id="descripcion" layoutX="91.0" layoutY="290.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="230.0" />
             <Text fx:id="precio" layoutX="184.0" layoutY="420.0" strokeType="OUTSIDE" strokeWidth="0.0" />
             <Button layoutX="342.0" layoutY="461.0" mnemonicParsing="false" onAction="#quitarServicio" text="%borrar" />
-            <Button layoutX="200.0" layoutY="461.0" mnemonicParsing="false" onAction="#insertServ" text="Insertar Servicio" />
+            <Button layoutX="200.0" layoutY="461.0" mnemonicParsing="false" onAction="#insertServ" text="%insertarServicio" />
             <ImageView fitHeight="41.0" fitWidth="51.0" layoutX="370.0" pickOnBounds="true" preserveRatio="true">
                 <image>
                     <Image url="@images/logo.png" />
                 </image>
             </ImageView>
-            <Text layoutX="123.0" layoutY="420.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Precio-&gt;" />
-         <FontIcon iconLiteral="fas-euro-sign" layoutX="220.0" layoutY="425.0" />
+            <Text layoutX="123.0" layoutY="420.0" strokeType="OUTSIDE" strokeWidth="0.0" text="%precio_i" />
+         <FontIcon iconLiteral="fas-euro-sign" layoutX="220.0" layoutY="420.0" />
         </children>
     </AnchorPane>
 
    <AnchorPane fx:id="insertarServicio" prefHeight="500.0" prefWidth="700.0" translateX="1000">
       <children>
 
-         <Text layoutX="248.0" layoutY="97.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Insertar Servicio">
+         <Text layoutX="248.0" layoutY="97.0" strokeType="OUTSIDE" strokeWidth="0.0" text="%insertarServicio">
             <font>
                <Font name="Elephant" size="24.0" />
             </font>
          </Text>
           <TextField fx:id="insertNombre" layoutX="127.0" layoutY="184.0" />
-         <Text layoutX="180.0" layoutY="180.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nombre" />
+         <Text layoutX="180.0" layoutY="180.0" strokeType="OUTSIDE" strokeWidth="0.0" text="%nombre" />
          <TextArea fx:id="insertDescripcion" layoutX="112.0" layoutY="243.0" prefHeight="200.0" prefWidth="200.0" />
-         <Text layoutX="171.0" layoutY="238.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Descripcion" />
-         <Text layoutX="488.0" layoutY="180.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Precio" />
+         <Text layoutX="171.0" layoutY="238.0" strokeType="OUTSIDE" strokeWidth="0.0" text="%descripcion_larga" />
+         <Text layoutX="488.0" layoutY="180.0" strokeType="OUTSIDE" strokeWidth="0.0" text="%precio" />
          <TextField fx:id="insertPrecio" layoutX="430.0" layoutY="184.0" />
          <TextField fx:id="insertTiempo" layoutX="430.0" layoutY="243.0" />
-         <Text layoutX="459.0" layoutY="238.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tiempo (Minutos)" />
-         <Button layoutX="470.0" layoutY="443.0" mnemonicParsing="false" onAction="#cargarFoto" text="Cargar Foto" />
-          <Button layoutX="410" layoutY="443" onAction="#servicioInsertado" text="Insertar" />
+         <Text layoutX="459.0" layoutY="238.0" strokeType="OUTSIDE" strokeWidth="0.0" text="%tiempo" />
+         <Button layoutX="470.0" layoutY="443.0" mnemonicParsing="false" onAction="#cargarFoto" text="%cargarFoto" />
+          <Button layoutX="410" layoutY="443" onAction="#servicioInsertado" text="%insertar" />
          <ImageView fx:id="insertFoto" fitHeight="150.0" fitWidth="300.0" layoutX="371.0" layoutY="279.0" pickOnBounds="true" preserveRatio="true" />
           <FontIcon fx:id="back" iconLiteral="fas-arrow-circle-left" iconSize="30" layoutX="14.0" layoutY="261.0" onMouseClicked="#back" />
          <FontIcon iconLiteral="fas-toolbox" iconSize="30" layoutX="187.0" layoutY="150.0" />

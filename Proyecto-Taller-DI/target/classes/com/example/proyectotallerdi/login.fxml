@@ -26,15 +26,14 @@
         <Button fx:id="insertar" layoutX="295.0" layoutY="341.0" onAction="#sinRellenar" text="%insertar" />
         <Button fx:id="borrar" layoutX="365.0" layoutY="341.0" onAction="#borrarCampos" text="%borrar" />
         <Text fx:id="rellenar" layoutX="260.0" layoutY="400.0" strokeType="OUTSIDE" strokeWidth="0.0" text="%rellenar" visible="false" />
-        <FontIcon iconColor="#901515" iconLiteral="fas-tools" iconSize="150" layoutX="504.0" layoutY="318.0" />
-        <ImageView fitHeight="150.0" fitWidth="229.0" layoutX="14.0" layoutY="79.0" pickOnBounds="true" preserveRatio="true">
+        <ImageView fitHeight="127.0" fitWidth="211.0" layoutX="14.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
             <image>
                 <Image url="@images/tallerLogin.png" />
             </image>
         </ImageView>
 
         <FontIcon iconLiteral="fas-user-times" iconSize="20" layoutX="648.0" layoutY="32.0" />
-      <Text layoutX="59.0" layoutY="269.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Taller 2ºDAM Proyecto Final Desarrollo Interfaces Equipo Trabajo : Daniel Castellote Mario Gonzalez   Javier Gonzalez Andrea Gomez  Adrian Lozano" textAlignment="CENTER" wrappingWidth="140.0">
+      <Text layoutX="552.0" layoutY="360.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Taller 2ºDAM Proyecto Final Desarrollo Interfaces Equipo Trabajo : Daniel Castellote Mario Gonzalez   Javier Gonzalez Andrea Gomez  Adrian Lozano" textAlignment="CENTER" wrappingWidth="140.0">
          <font>
             <Font name="Arial" size="14.0" />
          </font>

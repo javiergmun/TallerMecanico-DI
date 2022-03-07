@@ -23,7 +23,7 @@
         <Text layoutX="191.0" layoutY="325.0" strokeType="OUTSIDE" strokeWidth="0.0" text="%contraseña" />
         <Text layoutX="446.0" layoutY="203.0" strokeType="OUTSIDE" strokeWidth="0.0" text="%telefono" />
         <Text layoutX="453.0" layoutY="263.0" strokeType="OUTSIDE" strokeWidth="0.0" text="%direccion" />
-        <Text layoutX="468.0" layoutY="325.0" strokeType="OUTSIDE" strokeWidth="0.0" text="DNI" />
+        <Text layoutX="468.0" layoutY="325.0" strokeType="OUTSIDE" strokeWidth="0.0" text="%dni" />
 
         <FontIcon iconLiteral="far-address-book" iconSize="50" layoutX="457.0" layoutY="155.0" />
         <Button layoutX="413.0" layoutY="375.0" mnemonicParsing="false" onAction="#sinRellenar" text="%insertar" />
